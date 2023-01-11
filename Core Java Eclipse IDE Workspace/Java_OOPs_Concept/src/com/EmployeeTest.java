@@ -18,6 +18,7 @@ public class EmployeeTest {
 		
 		Employee emp4 = new Employee();
 		emp4.setEmpInfo(4, "Neena", 32000);
+		emp4.setEmpInfo(6, "Raj", 38000);
 		emp4.calSalary();
 		emp4.displayEmpInfo();
 		
