@@ -4,8 +4,18 @@ public class Employee {
 	int id;
 	String name;
 	float salary;
-	
-	
+	//Empty constructor 
+	public Employee() {
+		id =123;
+		name ="Unknown";
+		salary =8000;
+	}
+	// parameter constructor 
+	public Employee(int id, String name, float salary) {
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
 	void setEmpInfo(int id, String name, float salary) {
 		this.id =id;			// left side is instance or right side is local 
 		this.name = name;

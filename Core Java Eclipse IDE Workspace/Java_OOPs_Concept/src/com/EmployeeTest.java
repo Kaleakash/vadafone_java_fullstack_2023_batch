@@ -20,6 +20,10 @@ public class EmployeeTest {
 		emp4.setEmpInfo(4, "Neena", 32000);
 		emp4.calSalary();
 		emp4.displayEmpInfo();
+		
+		Employee emp5 = new Employee(5, "Steven", 26000);
+		emp5.calSalary();
+		emp5.displayEmpInfo();
 	}
 
 }
