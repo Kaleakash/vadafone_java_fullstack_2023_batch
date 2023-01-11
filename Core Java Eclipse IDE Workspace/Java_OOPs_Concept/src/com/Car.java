@@ -3,7 +3,7 @@ package com;
 public class Car {
 	int wheel;
 	String color;
-	float price;
+	float price;			// instance variable 
 	
 	void start() {
 		System.out.println("Cart Started...");
@@ -16,6 +16,14 @@ public class Car {
 	}
 	void stop() {
 		System.out.println("Car Stop");
+	}
+	
+	void displayCarDetails() {
+		String info="Car Info";			// local variable 
+		System.out.println("Wheel "+wheel);
+		System.out.println("Color "+color);
+		System.out.println("Price "+price);
+		System.out.println(info);
 	}
 }
 
