@@ -13,6 +13,8 @@ public class EmployeeTest {
 		System.out.println("Plz enter developer details");
 		dev1.readDev();
 		dev1.disDev();
+		
+		//Employee emp = new Employee();
 	}
 
 }

@@ -2,7 +2,7 @@ package com;
 
 import java.util.Scanner;
 
-public class Employee {
+public abstract class Employee {
 private int id;
 private String name;
 private float salary;
