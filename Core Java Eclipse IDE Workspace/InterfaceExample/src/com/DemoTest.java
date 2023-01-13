@@ -21,7 +21,7 @@ class Test implements Abc,Xyz{
 }
 public class DemoTest {
 	public static void main(String[] args) {
-		Test tt = new Test();
+		Test tt = new Test();	
 		tt.dis1();
 		tt.dis2();
 	}
