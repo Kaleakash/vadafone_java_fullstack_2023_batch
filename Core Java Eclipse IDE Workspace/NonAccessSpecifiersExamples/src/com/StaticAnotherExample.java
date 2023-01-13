@@ -3,9 +3,12 @@ class Info {
 	int a;
 	static int b;
 	void dis() {
-		int b;
-		System.out.println("a "+this.a);
-		System.out.println("b "+Info.b);
+		int a=1000;
+		int b=2000;
+		System.out.println("a local "+a);
+		System.out.println("a "+this.a);		// instance variable 
+		System.out.println("b "+b);              
+		System.out.println("b "+Info.b);     // static variable 
 	}
 }
 public class StaticAnotherExample {
