@@ -13,8 +13,11 @@ class Work implements Runnable{
 				wait();
 			}
 			if(name.endsWith("Leena") && i==6) {
-				notify();
+				
 				wait();
+			}
+			if(name.equals("John") && i==8) {
+				notifyAll();
 			}
 			}catch(Exception e) {}
 		}
