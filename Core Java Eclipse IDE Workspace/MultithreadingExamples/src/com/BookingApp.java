@@ -23,7 +23,6 @@ class Booking implements Runnable {
 	}
 }
 public class BookingApp {
-
 	public static void main(String[] args) {
 	Booking b1 = new Booking();			// avl=1
 	//Booking b2 = new Booking();			// avl=1
