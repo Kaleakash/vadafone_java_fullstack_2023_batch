@@ -20,7 +20,8 @@ public class ByteWiseOperation {
 		// soure :keyboard 
 		// destination : file 
 //		DataInputStream dis = new DataInputStream(System.in);
-//		FileOutputStream fos = new FileOutputStream("abc.txt");
+		FileOutputStream fos = new FileOutputStream("abc.txt"); // override 
+//		FileOutputStream fos = new FileOutputStream("abc.txt",true); // append 
 //		System.out.println("Enter the data");
 //		int ch;
 //		while((ch = dis.read()) != '\n') {
