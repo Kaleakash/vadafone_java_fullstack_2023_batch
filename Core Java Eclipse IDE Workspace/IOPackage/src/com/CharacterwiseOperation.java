@@ -48,8 +48,9 @@ public class CharacterwiseOperation {
 		
 		// read and write word wise 
 		FileReader fr  = new FileReader("C:\\Users\\akash\\Desktop\\abcd.txt");
+		
 		BufferedReader br = new BufferedReader(fr);
-		FileWriter fw = new FileWriter("ababab.txt");
+		FileWriter fw = new FileWriter("abababe.txt");
 		String info;
 		do {
 			info= br.readLine();
