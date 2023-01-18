@@ -1,6 +1,7 @@
 package com;
 
 import java.io.DataInputStream;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
@@ -18,14 +19,26 @@ public class ByteWiseOperation {
 		
 		// soure :keyboard 
 		// destination : file 
-		DataInputStream dis = new DataInputStream(System.in);
-		FileOutputStream fos = new FileOutputStream("abc.txt");
-		System.out.println("Enter the data");
+//		DataInputStream dis = new DataInputStream(System.in);
+//		FileOutputStream fos = new FileOutputStream("abc.txt");
+//		System.out.println("Enter the data");
+//		int ch;
+//		while((ch = dis.read()) != '\n') {
+//			fos.write(ch);
+//		}
+//		System.out.println("done!");
+		
+		// souce : file 
+		// destintation : file 
+		FileInputStream fis = new FileInputStream("abc.txt");
+		FileOutputStream fos = new FileOutputStream("xyz.txt");
 		int ch;
-		while((ch = dis.read()) != '\n') {
+		while((ch = fis.read()) != -1) {  //-1 is known as EOF
 			fos.write(ch);
+			//System.out.print(ch);
+			System.out.print((char)ch);
 		}
-		System.out.println("done!");
+		System.out.println("file copied..");
 	}
 
 }
