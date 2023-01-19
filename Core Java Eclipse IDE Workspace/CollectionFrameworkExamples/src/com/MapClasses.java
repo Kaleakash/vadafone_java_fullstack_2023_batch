@@ -59,7 +59,7 @@ public class MapClasses {
 //		System.out.println(mm.containsKey(1));
 //		System.out.println(mm.containsKey(100));
 		
-		// Hashtabel : all method are synchronized 
+		// Hashtable : all method are synchronized 
 		// doesn't allow null key as well as null value 
 		Map mm = new Hashtable();
 		mm.put(2,"Lex");
