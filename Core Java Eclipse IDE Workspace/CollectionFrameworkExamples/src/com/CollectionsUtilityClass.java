@@ -7,7 +7,7 @@ import java.util.List;
 public class CollectionsUtilityClass {
 
 	public static void main(String[] args) {
-		List<String> listOfStd = new ArrayList<>();
+		List<String> listOfStd = new ArrayList<String>();
 		listOfStd.add("Lex"); listOfStd.add("Steven"); listOfStd.add("John"); listOfStd.add("Raj"); listOfStd.add("Leena");
 		listOfStd.add("Ajay");
 		System.out.println("Before sort");
