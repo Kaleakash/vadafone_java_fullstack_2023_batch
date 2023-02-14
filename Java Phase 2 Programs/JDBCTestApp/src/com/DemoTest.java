@@ -81,33 +81,37 @@ public class DemoTest {
 //		if(temp>0) {
 //			System.out.println("Record insered successfully");
 //		}
-//		System.out.println("Delete query");
-//		PreparedStatement pstmt = con.prepareStatement("delete from employee where id =?");
+
+			System.out.println("Delete query");
+		PreparedStatement pstmt = con.prepareStatement("delete from employee where name =?");
 //		System.out.println("Plz enter the id to delete the record");
 //		int id = sc.nextInt();
 //			pstmt.setInt(1, id);
-//		int temp = pstmt.executeUpdate();
-//		if(temp>0) {
-//			System.out.println("Record deleted successfully");
-//		}else {
-//			System.out.println("Record not present");
-//		}
-		
-		System.out.println("Update query");
-	PreparedStatement pstmt = con.prepareStatement("update employee set salary = ? where id = ?");
-		System.out.println("Plz enter the id to update salary");
-		int id = sc.nextInt();
-		System.out.println("Plz enter the new salary");
-		float salary = sc.nextFloat();
-			pstmt.setInt(2, id);
-			pstmt.setFloat(1, salary);
-			
+		System.out.println("Plz enter the name to delete the record");
+		String name = sc.next();
+			pstmt.setString(1, name);
 		int temp = pstmt.executeUpdate();
 		if(temp>0) {
-			System.out.println("Record updated successfully");
+			System.out.println("Record deleted successfully");
 		}else {
 			System.out.println("Record not present");
 		}
+		
+//		System.out.println("Update query");
+//	PreparedStatement pstmt = con.prepareStatement("update employee set salary = ? where id = ?");
+//		System.out.println("Plz enter the id to update salary");
+//		int id = sc.nextInt();
+//		System.out.println("Plz enter the new salary");
+//		float salary = sc.nextFloat();
+//			pstmt.setInt(2, id);
+//			pstmt.setFloat(1, salary);
+//			
+//		int temp = pstmt.executeUpdate();
+//		if(temp>0) {
+//			System.out.println("Record updated successfully");
+//		}else {
+//			System.out.println("Record not present");
+//		}
 		
 		} catch (Exception e) {
 			System.out.println(e);
