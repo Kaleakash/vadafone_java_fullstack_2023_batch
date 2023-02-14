@@ -9,7 +9,7 @@ public class EmployeeService {
 	
 	public String storeEmployee(Employee emp) {
 		
-		if(emp.getSalary()>12000) {
+		if(emp.getSalary()>0) {
 				
 				if(ed.storeEmployee(emp)>0) {
 					return "Record insered in database";

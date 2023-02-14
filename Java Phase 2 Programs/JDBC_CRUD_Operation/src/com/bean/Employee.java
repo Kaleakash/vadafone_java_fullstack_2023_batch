@@ -1,9 +1,9 @@
 package com.bean;
 
-public class Employee {
-private int id;
-private String name;
-private float salary;
+public class Employee {		// EMPLOYEE =Employee 
+private int id;				// ID = id
+private String name;		//NAME = name
+private float salary;		// SALARY = salary
 public int getId() {
 	return id;
 }
