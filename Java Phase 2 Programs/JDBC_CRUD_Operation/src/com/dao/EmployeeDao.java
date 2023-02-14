@@ -11,7 +11,7 @@ public class EmployeeDao {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 Connection con = 
 DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root@123");
-PreparedStatement pstmt = con.prepareStatement("inser into employee values(?,?,?)");
+PreparedStatement pstmt = con.prepareStatement("insert into employee values(?,?,?)");
 pstmt.setInt(1, emp.getId());
 pstmt.setString(2, emp.getName());
 pstmt.setFloat(3, emp.getSalary());
