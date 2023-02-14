@@ -66,20 +66,49 @@ public class DemoTest {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root@123");
 		//Statement stmt = con.createStatement();
-		PreparedStatement pstmt = con.prepareStatement("insert into employee values(?,?,?)");
-		System.out.println("Enter the id");
+//		System.out.println("insert query");
+//		PreparedStatement pstmt = con.prepareStatement("insert into employee values(?,?,?)");
+//		System.out.println("Enter the id");
+//		int id = sc.nextInt();
+//			pstmt.setInt(1, id);
+//		System.out.println("Enter the name");
+//		String name = sc.next();
+//			pstmt.setString(2, name);
+//		System.out.println("Enter the salary");
+//		float salary = sc.nextFloat();
+//			pstmt.setFloat(3, salary);
+//		int temp = pstmt.executeUpdate();
+//		if(temp>0) {
+//			System.out.println("Record insered successfully");
+//		}
+//		System.out.println("Delete query");
+//		PreparedStatement pstmt = con.prepareStatement("delete from employee where id =?");
+//		System.out.println("Plz enter the id to delete the record");
+//		int id = sc.nextInt();
+//			pstmt.setInt(1, id);
+//		int temp = pstmt.executeUpdate();
+//		if(temp>0) {
+//			System.out.println("Record deleted successfully");
+//		}else {
+//			System.out.println("Record not present");
+//		}
+		
+		System.out.println("Update query");
+	PreparedStatement pstmt = con.prepareStatement("update employee set salary = ? where id = ?");
+		System.out.println("Plz enter the id to update salary");
 		int id = sc.nextInt();
-			pstmt.setInt(1, id);
-		System.out.println("Enter the name");
-		String name = sc.next();
-			pstmt.setString(2, name);
-		System.out.println("Enter the salary");
+		System.out.println("Plz enter the new salary");
 		float salary = sc.nextFloat();
-			pstmt.setFloat(3, salary);
+			pstmt.setInt(2, id);
+			pstmt.setFloat(1, salary);
+			
 		int temp = pstmt.executeUpdate();
 		if(temp>0) {
-			System.out.println("Record insered successfully");
+			System.out.println("Record updated successfully");
+		}else {
+			System.out.println("Record not present");
 		}
+		
 		} catch (Exception e) {
 			System.out.println(e);
 		}
