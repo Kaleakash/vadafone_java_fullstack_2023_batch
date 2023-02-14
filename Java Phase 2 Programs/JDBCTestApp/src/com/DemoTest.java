@@ -1,5 +1,6 @@
 package com;
 import java.sql.*;
+import java.util.Scanner;
 public class DemoTest {
 
 	public static void main(String[] args) {
@@ -15,9 +16,9 @@ public class DemoTest {
 //		System.out.println("id is "+rs.getInt(1)+" Name is "+rs.getString(2)+" Salary is "+rs.getFloat(3));
 //	}
 			
-	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root@123");
-	Statement stmt = con.createStatement();
+//	Class.forName("com.mysql.cj.jdbc.Driver");
+//	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root@123");
+//	Statement stmt = con.createStatement();
 	
 //		System.out.println("Retrieve all employee records one by one");
 //		ResultSet rs = stmt.executeQuery("select * from employee");
@@ -51,16 +52,34 @@ public class DemoTest {
 //		}
 		
 	
-	System.out.println("update Query");
-	
-	int temp = stmt.executeUpdate("update employee set salary = 28000 where id=1");
-	System.out.println(" number of records updated "+temp);
-	if(temp>0) {
-		System.out.println("record updated successfully");
-	}else {
-		System.out.println("Record not present");
-	}
-	
+//	System.out.println("update Query");
+//				
+//	int temp = stmt.executeUpdate("update employee set salary = 28000 where id=1");
+//	System.out.println(" number of records updated "+temp);
+//	if(temp>0) {
+//		System.out.println("record updated successfully");
+//	}else {
+//		System.out.println("Record not present");
+//	}
+		Scanner sc = new Scanner(System.in);	
+		System.out.println("Using PreparedStatement ");
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root@123");
+		//Statement stmt = con.createStatement();
+		PreparedStatement pstmt = con.prepareStatement("insert into employee values(?,?,?)");
+		System.out.println("Enter the id");
+		int id = sc.nextInt();
+			pstmt.setInt(1, id);
+		System.out.println("Enter the name");
+		String name = sc.next();
+			pstmt.setString(2, name);
+		System.out.println("Enter the salary");
+		float salary = sc.nextFloat();
+			pstmt.setFloat(3, salary);
+		int temp = pstmt.executeUpdate();
+		if(temp>0) {
+			System.out.println("Record insered successfully");
+		}
 		} catch (Exception e) {
 			System.out.println(e);
 		}
