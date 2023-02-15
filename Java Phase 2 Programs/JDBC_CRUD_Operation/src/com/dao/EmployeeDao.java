@@ -1,6 +1,8 @@
 package com.dao;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.bean.Employee;
 
@@ -71,4 +73,28 @@ ResultSet rs = pstmt.executeQuery();
 		}
 		return 0;
 	}
+	
+	public List<Employee> findAllEmployee() {
+		List<Employee> listOfEmp = new ArrayList<>();
+		try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+         Connection con = 
+         DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root@123");
+          PreparedStatement pstmt = con.prepareStatement("select * from employee");
+
+        ResultSet rs = pstmt.executeQuery();
+        while(rs.next()) {		// we need to write the code to convert each record into java bean object. 
+        	Employee emp = new Employee();
+        	emp.setId(rs.getInt(1));
+        	emp.setName(rs.getString(2));
+        	emp.setSalary(rs.getFloat(3));			// converted each record into object 
+        	
+        	listOfEmp.add(emp);					// that object stored in arraylist
+        }
+		} catch (Exception e) {
+		System.err.println(e);
+		}
+		return listOfEmp;
+	}
+	
 }

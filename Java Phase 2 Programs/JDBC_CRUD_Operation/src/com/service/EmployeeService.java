@@ -1,5 +1,8 @@
 package com.service;
 
+import java.util.Iterator;
+import java.util.List;
+
 import com.bean.Employee;
 import com.dao.EmployeeDao;
 
@@ -49,4 +52,18 @@ public class EmployeeService {
 			return "Record not present";
 		}
 	}
+	
+	public List<Employee> getAllEmployee() {
+		List<Employee> listOfEmp = ed.findAllEmployee();
+		Iterator<Employee> li = listOfEmp.iterator();
+		while(li.hasNext()) {
+			Employee emp = li.next();
+			emp.setSalary(emp.getSalary()+2000);
+		}
+		
+        return listOfEmp;
+        
+      //return ed.findAllEmployee();
+	}
+	
 }

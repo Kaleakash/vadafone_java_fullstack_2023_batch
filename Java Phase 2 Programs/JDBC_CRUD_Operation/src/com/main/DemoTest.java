@@ -1,5 +1,7 @@
 package com.main;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 import com.bean.Employee;
@@ -17,7 +19,7 @@ public class DemoTest {
 		String result;
 		String con;
 		do {
-			System.out.println("1:Add Employee 2 : Update Employee Salary 3 :Delete the Employee record");
+			System.out.println("1:Add Employee 2 : Update Employee Salary 3 :Delete the Employee record 4: Get All Employee records");
 			System.out.println("Plz enter your choice");
 			choice = sc.nextInt();
 			switch(choice) {
@@ -51,6 +53,14 @@ public class DemoTest {
 			       id = sc.nextInt();
 			       result = es.deleteEmployeeRecord(id);
 			       System.out.println(result);
+			       break;
+			case 4:System.out.println("All Employee details");
+			       List<Employee> listOfEmp = es.getAllEmployee();
+			       Iterator<Employee> li = listOfEmp.iterator();
+			       while(li.hasNext()) {
+			    	   Employee e = li.next();
+			    	   System.out.println("id is "+e.getId()+" Name is "+e.getName()+" salary is "+e.getSalary());
+			       }
 			       break;
 			default:System.out.println("Wrong choice");
 			     break;
