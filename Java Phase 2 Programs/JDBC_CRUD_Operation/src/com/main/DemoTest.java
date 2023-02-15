@@ -17,7 +17,7 @@ public class DemoTest {
 		String result;
 		String con;
 		do {
-			System.out.println("1:Add Employee");
+			System.out.println("1:Add Employee 2 : Update Employee Salary 3 :Delete the Employee record");
 			System.out.println("Plz enter your choice");
 			choice = sc.nextInt();
 			switch(choice) {
@@ -35,6 +35,23 @@ public class DemoTest {
 				  result = es.storeEmployee(emp);
 				  System.out.println(result);
 				  break;
+			case 2: System.out.println("Update Salary");
+					System.out.println("Enter the id");
+					id = sc.nextInt();
+					System.out.println("Enter the salary");
+					salary = sc.nextFloat();
+					Employee emp1 = new Employee();
+					emp1.setId(id);
+					emp1.setSalary(salary);
+					result = es.updateEmployee(emp1);
+					System.out.println(result);
+					break;
+			case 3:System.out.println("Delete record");
+			       System.out.println("Enter the id");
+			       id = sc.nextInt();
+			       result = es.deleteEmployeeRecord(id);
+			       System.out.println(result);
+			       break;
 			default:System.out.println("Wrong choice");
 			     break;
 			}
@@ -42,6 +59,8 @@ public class DemoTest {
 		con = sc.next();
 		} while (con.equalsIgnoreCase("yes"));
 		System.out.println("Thank you!");
+		
+		sc.close();
 	}
 
 }

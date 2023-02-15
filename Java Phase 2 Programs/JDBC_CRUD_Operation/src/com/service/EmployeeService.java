@@ -21,4 +21,32 @@ public class EmployeeService {
 			return "Salary must be >12000";
 		}
 	}
+	
+	public String updateEmployee(Employee emp) {				// emp id as 1, salary = 20000;
+		float employeeOldSalary = ed.getEmployeeSalary(emp.getId());
+		
+		if(employeeOldSalary==0) {
+			return "Employee record not present";
+		
+		}else if(emp.getSalary()>employeeOldSalary) {
+		
+			if(ed.updateEmployee(emp)>0) {
+				return "Record updated successfully";
+			}else {
+				return "Record not updated";
+			}
+			
+		}else {
+			return "New Salary must be > Old Salary";
+		}
+		
+	}
+	
+	public String deleteEmployeeRecord(int id) {
+		if(ed.deleteEmployee(id)>0) {
+			return "Record deleted successfully";
+		}else {
+			return "Record not present";
+		}
+	}
 }
