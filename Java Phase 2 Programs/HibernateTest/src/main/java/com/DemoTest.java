@@ -137,9 +137,8 @@ public class DemoTest {
 //				}
 		
 System.out.println("sql query using hibernate ");	
-TypedQuery<Object[]> tq = session.createSQLQuery("select * from employee");
+TypedQuery<Object[]> tq = session.createSQLQuery("select * from sample");
 	List<Object[]> listOfEmp = tq.getResultList();
-		System.out.println("Number of records are "+listOfEmp.size());
 			Iterator<Object[]> li = listOfEmp.iterator();
 					while(li.hasNext()) {
 					Object obj[] = li.next();
