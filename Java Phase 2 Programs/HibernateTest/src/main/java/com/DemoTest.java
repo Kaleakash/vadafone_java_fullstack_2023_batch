@@ -1,4 +1,9 @@
 package com;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.persistence.TypedQuery;
+
 //import org.hibernate.Session;
 //import org.hibernate.SessionFactory;
 //import org.hibernate.Transaction;
@@ -48,16 +53,34 @@ public class DemoTest {
 //			System.out.println("Record updated successfully");
 //		}
 		
-		System.out.println("Retrieve only one record");
-	
-		Employee emp = session.get(Employee.class, 2);	// select * from employee where id =2
-		if(emp==null) {
-			System.out.println("Record not present");
-		}else {
-			//System.out.println("id is "+emp.getId()+" name is"+emp.getName()+" salary is "+emp.getSalary());
-			System.out.println(emp);		// internally call toString() of object. 
+//		System.out.println("Retrieve only one record");
+//	
+//		Employee emp = session.get(Employee.class, 2);	// select * from employee where id =2
+//		if(emp==null) {
+//			System.out.println("Record not present");
+//		}else {
+//			//System.out.println("id is "+emp.getId()+" name is"+emp.getName()+" salary is "+emp.getSalary());
+//			System.out.println(emp);		// internally call toString() of object. 
+//		}
+		
+		
+//		System.out.println("Retrieve all property of entity class");
+//		//Query qry  =  session.createQuery("select e from Employee e");
+//		//Query qry  =  session.createQuery("from Employee e");
+//		Query qry  =  session.createQuery("from Employee");
+//		List<Employee> listOfEmp =qry.list();
+//		System.out.println("Number of records are "+listOfEmp.size());
+		
+		System.out.println("Retrieve all property of entity class");
+		TypedQuery<Employee> tq = session.createQuery("select e from Employee e");
+		List<Employee> listOfEmp = tq.getResultList();
+		System.out.println("Number of records are "+listOfEmp.size());
+		Iterator<Employee> li = listOfEmp.iterator();
+		while(li.hasNext()) {
+			Employee emp = li.next();
+			System.out.println(emp);   // it call toString method
 		}
-	}
+	}  
 
 }
 
