@@ -81,26 +81,70 @@ public class DemoTest {
 //			System.out.println(emp);   // it call toString method
 //		}
 		
-		System.out.println("Retrieve all property of entity class with condition");
+		//System.out.println("Retrieve all property of entity class with condition");
 	//TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.id=2");
 	//TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.name='Lex' ");
 	//TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.salary > 20000 ");
 		
 //TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.id=:eid "); //:id is label
 //tq.setParameter("eid", 2);
+		
 //		TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.name=:ename "); //:ename is label
 //		tq.setParameter("ename", "Lex");
 		
-		TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.salary > :esalary "); //:esalary is label
-		tq.setParameter("esalary", 20000f);
-
-		List<Employee> listOfEmp = tq.getResultList();
+//TypedQuery<Employee> tq = 
+//session.createQuery("select e from Employee e where e.salary > :esalary "); //:esalary is label
+//tq.setParameter("esalary", 20000f);
+//
+//		List<Employee> listOfEmp = tq.getResultList();
+//		System.out.println("Number of records are "+listOfEmp.size());
+//		Iterator<Employee> li = listOfEmp.iterator();
+//		while(li.hasNext()) {
+//			Employee emp = li.next();
+//			System.out.println(emp);   // it call toString method
+//		}
+		
+//System.out.println("retreive only name - partial objet");	
+//TypedQuery<String> tq = session.createQuery("select e.name from Employee e"); //:esalary is label
+//				
+//	List<String> listOfEmp = tq.getResultList();
+//	System.out.println("Number of records are "+listOfEmp.size());
+//	Iterator<String> li = listOfEmp.iterator();
+//				while(li.hasNext()) {
+//					String name = li.next();
+//					System.out.println(name);   
+//				}
+		
+//		System.out.println("retreive only id - partial objet");	
+//		TypedQuery<Integer> tq = session.createQuery("select e.id from Employee e"); //:esalary is label
+//						
+//			List<Integer> listOfEmp = tq.getResultList();
+//			System.out.println("Number of records are "+listOfEmp.size());
+//			Iterator<Integer> li = listOfEmp.iterator();
+//						while(li.hasNext()) {
+//							int id = li.next();
+//							System.out.println(id);   
+//						}
+		
+//System.out.println("retreive only id - name - partial objet");	
+//TypedQuery<Object[]> tq = session.createQuery("select e.id,e.name from Employee e"); //:esalary is label
+//		List<Object[]> listOfEmp = tq.getResultList();
+//		System.out.println("Number of records are "+listOfEmp.size());
+//		Iterator<Object[]> li = listOfEmp.iterator();
+//					while(li.hasNext()) {
+//					Object obj[] = li.next();
+//					System.out.println(" id is "+obj[0]+" name is "+obj[1]);   
+//				}
+		
+System.out.println("sql query using hibernate ");	
+TypedQuery<Object[]> tq = session.createSQLQuery("select * from employee");
+	List<Object[]> listOfEmp = tq.getResultList();
 		System.out.println("Number of records are "+listOfEmp.size());
-		Iterator<Employee> li = listOfEmp.iterator();
-		while(li.hasNext()) {
-			Employee emp = li.next();
-			System.out.println(emp);   // it call toString method
-		}
+			Iterator<Object[]> li = listOfEmp.iterator();
+					while(li.hasNext()) {
+					Object obj[] = li.next();
+							System.out.println(" id is "+obj[0]+" name is "+obj[1]);   
+					}
 	}  
 
 }
