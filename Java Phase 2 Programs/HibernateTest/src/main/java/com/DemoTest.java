@@ -71,8 +71,29 @@ public class DemoTest {
 //		List<Employee> listOfEmp =qry.list();
 //		System.out.println("Number of records are "+listOfEmp.size());
 		
-		System.out.println("Retrieve all property of entity class");
-		TypedQuery<Employee> tq = session.createQuery("select e from Employee e");
+//		System.out.println("Retrieve all property of entity class");
+//		TypedQuery<Employee> tq = session.createQuery("select e from Employee e");
+//		List<Employee> listOfEmp = tq.getResultList();
+//		System.out.println("Number of records are "+listOfEmp.size());
+//		Iterator<Employee> li = listOfEmp.iterator();
+//		while(li.hasNext()) {
+//			Employee emp = li.next();
+//			System.out.println(emp);   // it call toString method
+//		}
+		
+		System.out.println("Retrieve all property of entity class with condition");
+	//TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.id=2");
+	//TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.name='Lex' ");
+	//TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.salary > 20000 ");
+		
+//TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.id=:eid "); //:id is label
+//tq.setParameter("eid", 2);
+//		TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.name=:ename "); //:ename is label
+//		tq.setParameter("ename", "Lex");
+		
+		TypedQuery<Employee> tq = session.createQuery("select e from Employee e where e.salary > :esalary "); //:esalary is label
+		tq.setParameter("esalary", 20000f);
+
 		List<Employee> listOfEmp = tq.getResultList();
 		System.out.println("Number of records are "+listOfEmp.size());
 		Iterator<Employee> li = listOfEmp.iterator();
