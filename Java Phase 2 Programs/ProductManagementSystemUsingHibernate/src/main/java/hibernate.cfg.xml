@@ -8,6 +8,6 @@
   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydb</property>
   <property name="hibernate.connection.username">root</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-  <mapping class="com.Employee"/>
+  <mapping class="com.entity.Product"/>
  </session-factory>
 </hibernate-configuration>
