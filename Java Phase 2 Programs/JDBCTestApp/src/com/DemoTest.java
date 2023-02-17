@@ -35,7 +35,7 @@ public class DemoTest {
 		
 //		System.out.println("Insert Query");
 //		
-//		int temp = stmt.executeUpdate("insert into employee values(7,'Neena',18000)");
+//int temp = stmt.executeUpdate("insert into employee values(7,'Neena',18000)");
 //		if(temp>0) {
 //			System.out.println("record inserted successfully");
 //		}

@@ -62,6 +62,8 @@ public class DemoTest {
 			    	   System.out.println("id is "+e.getId()+" Name is "+e.getName()+" salary is "+e.getSalary());
 			       }
 			       break;
+			       
+			       
 			default:System.out.println("Wrong choice");
 			     break;
 			}
