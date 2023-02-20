@@ -36,7 +36,7 @@ public class OneToManyRealtionshipExample {
 //		System.out.println("Student record saved..");
 		
 		// Find trainer and associated student with that trainer 
-		Trainer t = session.get(Trainer.class, 3);
+		Trainer t = session.get(Trainer.class, 1);
 		if(t==null) {
 			System.out.println("No trainer present");
 		}else {
