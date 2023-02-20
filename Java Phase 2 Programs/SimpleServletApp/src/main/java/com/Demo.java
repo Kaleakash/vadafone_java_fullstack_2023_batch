@@ -18,7 +18,7 @@ public class Demo extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 System.out.println(" welcome to servlet");	//this output display on server console. 
 PrintWriter pw = response.getWriter();
-	pw.println("Welcome to My web application"); // this code display 
+pw.println("Welcome to My web application"); // this code display 
 											//output on browser area. 
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -34,9 +34,9 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("pass");
 		
 		if(emailid.equals("akash@gmail.com") && password.equals("123")) {
-			pw.println("Successfully login");
+			pw.println("Successfully login with get method");
 		}else {
-			pw.println("failure try once again");
+			pw.println("failure try once again with get method");
 		}
 		
 	}
@@ -46,7 +46,18 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+PrintWriter pw = response.getWriter();
+		
+		String emailid = request.getParameter("emailid");
+		
+		String password = request.getParameter("pass");
+		
+		if(emailid.equals("akash@gmail.com") && password.equals("123")) {
+			pw.println("Successfully login with post method");
+		}else {
+			pw.println("failure try once again with post method");
+		}
 	}
 
 }

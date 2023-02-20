@@ -23,12 +23,13 @@
   <servlet>
     <description></description>
     <display-name>LoginServlet</display-name>
-    <servlet-name>LoginServlet</servlet-name>
+    	<servlet-name>A</servlet-name>
     <servlet-class>com.LoginServlet</servlet-class>
   </servlet>
+  
   <servlet-mapping>
-    <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/LoginServlet</url-pattern>
+    	<servlet-name>A</servlet-name>
+    <url-pattern>/CheckLogin</url-pattern>
   </servlet-mapping>
   
   

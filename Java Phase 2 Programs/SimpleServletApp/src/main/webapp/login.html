@@ -5,11 +5,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Login Page</h2>
-<form action="LoginServlet">
+	<h2>Login Page with Get method</h2>
+<form action="CheckLogin" method="get">
 
 		<label>EmailId</label>
-		<input type="text" name="emailid"/><br/>
+		<input type="email" name="emailid"/><br/>
+
+		<label>Password</label>
+		<input type="password" name="pass"/><br/>
+
+		<input type="submit" value="submit"/>
+		<input type="reset" value="reset"/>
+	
+</form>
+<hr/>
+<h2>Login Page with Post method</h2>
+<form action="CheckLogin" method="post">
+
+		<label>EmailId</label>
+		<input type="email" name="emailid"/><br/>
 
 		<label>Password</label>
 		<input type="password" name="pass"/><br/>
