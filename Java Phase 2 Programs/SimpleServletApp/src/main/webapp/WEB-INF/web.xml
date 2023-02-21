@@ -19,18 +19,24 @@
     <servlet-name>Demo</servlet-name>
     <url-pattern>/Hi</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>LoginServlet</display-name>
-    	<servlet-name>A</servlet-name>
+    <servlet-name>A</servlet-name>
     <servlet-class>com.LoginServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-    	<servlet-name>A</servlet-name>
+    <servlet-name>A</servlet-name>
     <url-pattern>/CheckLogin</url-pattern>
   </servlet-mapping>
-  
-  
+  <servlet>
+    <description></description>
+    <display-name>Home</display-name>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>com.Home</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/Home</url-pattern>
+  </servlet-mapping>
 </web-app>
