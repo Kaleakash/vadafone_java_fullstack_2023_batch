@@ -28,13 +28,13 @@ public class LoginDbServlet extends HttpServlet {
     }
 
 	// signIn
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter pw = response.getWriter();
-		response.setContentType("text/html");
-	String emailid = request.getParameter("emailid");
-	String password = request.getParameter("pass");
-		RequestDispatcher rd1 = request.getRequestDispatcher("logindb.html");
-		RequestDispatcher rd2 = request.getRequestDispatcher("Home");
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		PrintWriter pw = res.getWriter();
+		res.setContentType("text/html");
+	String emailid = req.getParameter("emailid");
+	String password = req.getParameter("pass");
+		RequestDispatcher rd1 = req.getRequestDispatcher("logindb.html");
+		RequestDispatcher rd2 = req.getRequestDispatcher("Home");
 		try {
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con = 
@@ -45,14 +45,14 @@ con.prepareStatement("select * from login where emailid=? and password = ?");
 			pstmt.setString(2, password);
 	ResultSet rs = pstmt.executeQuery();
 	if(rs.next()) {
-		rd2.forward(request, response);
+		rd2.forward(req, res);
 	}else {
 		pw.print("Failure try once again");
-		rd1.include(request, response);
+		rd1.include(req, res);
 	}
 		} catch (Exception e) {
 		pw.print(e);
-		rd1.include(request, response);
+		rd1.include(req, res);
 		}
 		
 	}
