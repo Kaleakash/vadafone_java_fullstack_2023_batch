@@ -39,4 +39,14 @@
     <servlet-name>Home</servlet-name>
     <url-pattern>/Home</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginDbServlet</display-name>
+    <servlet-name>LoginDbServlet</servlet-name>
+    <servlet-class>com.LoginDbServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginDbServlet</servlet-name>
+    <url-pattern>/LoginDbServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
