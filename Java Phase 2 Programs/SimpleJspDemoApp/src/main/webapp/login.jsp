@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form>
+<form action="checkLogin.jsp">
 
 <label>EmailId</label>
 <input type="email" name="emailid"><br/>
