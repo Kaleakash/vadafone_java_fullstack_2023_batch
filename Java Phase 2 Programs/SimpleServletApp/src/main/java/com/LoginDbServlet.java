@@ -31,8 +31,8 @@ public class LoginDbServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");
-		String emailid = request.getParameter("emailid");
-		String password = request.getParameter("password");
+	String emailid = request.getParameter("emailid");
+	String password = request.getParameter("pass");
 		RequestDispatcher rd1 = request.getRequestDispatcher("logindb.html");
 		RequestDispatcher rd2 = request.getRequestDispatcher("Home");
 		try {
@@ -41,8 +41,8 @@ public class LoginDbServlet extends HttpServlet {
 DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root@123");
 PreparedStatement pstmt = 
 con.prepareStatement("select * from login where emailid=? and password = ?");
-	pstmt.setString(1, emailid);
-	pstmt.setString(2, password);
+		pstmt.setString(1, emailid);
+			pstmt.setString(2, password);
 	ResultSet rs = pstmt.executeQuery();
 	if(rs.next()) {
 		rd2.forward(request, response);
@@ -62,7 +62,7 @@ con.prepareStatement("select * from login where emailid=? and password = ?");
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");
 		String emailid = request.getParameter("emailid");
-		String password = request.getParameter("password");
+		String password = request.getParameter("pass");
 		RequestDispatcher rd1 = request.getRequestDispatcher("signup.html");
 		try {
 	Class.forName("com.mysql.cj.jdbc.Driver");
