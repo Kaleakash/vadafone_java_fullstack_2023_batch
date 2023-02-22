@@ -2,6 +2,7 @@ package com.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,8 +31,14 @@ public class ProductController extends HttpServlet {
 
 	// retrieve product details 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+	PrintWriter pw = response.getWriter();
+	ProductService ps = new ProductService();
+	List<Product> listOfProduct = ps.findAllProduct();
+	pw.println("Number of product are "+listOfProduct.size());
+	RequestDispatcher rd = request.getRequestDispatcher("viewProduct.jsp");
+	rd.include(request, response);
+	
+	
 	}
 
 	// store product details 
