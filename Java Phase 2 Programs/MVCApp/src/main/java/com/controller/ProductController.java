@@ -2,6 +2,7 @@ package com.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -36,6 +37,15 @@ public class ProductController extends HttpServlet {
 	ProductService ps = new ProductService();
 	List<Product> listOfProduct = ps.findAllProduct();
 	pw.println("Number of product are "+listOfProduct.size());
+	Iterator<Product> ii = listOfProduct.iterator();
+	while(ii.hasNext()) {
+		Product p = ii.next();
+		pw.println("<div>");
+		pw.println("<img src="+p.getImageUrl()+" width=100 height=100/>");
+		pw.println("<span>Pid is "+p.getPid()+" PName is "+p.getPname()+"</span>");
+		pw.println("</div>");
+	}
+	
 	RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 	rd.include(request, response);
 	
