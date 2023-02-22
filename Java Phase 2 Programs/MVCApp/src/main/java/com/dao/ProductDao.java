@@ -10,7 +10,7 @@ public class ProductDao {
 
 	public int storeProduct(Product product) {
 		SessionFactory sf = DbResource.getSessionFactory();
-		Session session = sf.getCurrentSession();
+		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
 		tran.begin();
 			session.save(product);
@@ -19,7 +19,7 @@ public class ProductDao {
 	}
 	public List<Product> findAllProduct() {
 		SessionFactory sf = DbResource.getSessionFactory();
-		Session session = sf.getCurrentSession();
+		Session session = sf.openSession();
 		TypedQuery tq = session.createQuery("from Product");
 		List<Product> listOfProdut = tq.getResultList();
 		return listOfProdut;

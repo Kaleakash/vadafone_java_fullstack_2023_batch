@@ -37,6 +37,9 @@ public class ProductController extends HttpServlet {
 	// store product details 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw = response.getWriter();
+		
+		response.setContentType("text/html");
+		
 		String pname = request.getParameter("pname");
 		float price = Float.parseFloat(request.getParameter("price"));
 		int quantity = Integer.parseInt(request.getParameter("quantity"));
@@ -50,7 +53,9 @@ public class ProductController extends HttpServlet {
 		
 		ProductService ps = new ProductService();
 		String result  = ps.storeProduct(p);
+		
 		pw.println(result);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("storeProduct.jsp");
 		rd.include(request, response);
 		

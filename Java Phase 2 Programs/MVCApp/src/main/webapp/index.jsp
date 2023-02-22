@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>MVC App!</h1>
+<jsp:include page="storeProduct.jsp"></jsp:include>
 </body>
 </html>
