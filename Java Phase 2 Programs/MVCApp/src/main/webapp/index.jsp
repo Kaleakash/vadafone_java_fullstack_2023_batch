@@ -9,5 +9,6 @@
 <body>
 <h1>MVC App!</h1>
 <jsp:include page="storeProduct.jsp"></jsp:include>
+<jsp:include page="viewProduct.jsp"></jsp:include>
 </body>
 </html>

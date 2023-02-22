@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<a href="ProductController">View Product</a>
 </body>
 </html>

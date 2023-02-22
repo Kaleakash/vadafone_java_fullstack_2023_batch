@@ -32,10 +32,11 @@ public class ProductController extends HttpServlet {
 	// retrieve product details 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	PrintWriter pw = response.getWriter();
+	response.setContentType("text/html");
 	ProductService ps = new ProductService();
 	List<Product> listOfProduct = ps.findAllProduct();
 	pw.println("Number of product are "+listOfProduct.size());
-	RequestDispatcher rd = request.getRequestDispatcher("viewProduct.jsp");
+	RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 	rd.include(request, response);
 	
 	
@@ -63,7 +64,7 @@ public class ProductController extends HttpServlet {
 		
 		pw.println(result);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("storeProduct.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		rd.include(request, response);
 		
 		
