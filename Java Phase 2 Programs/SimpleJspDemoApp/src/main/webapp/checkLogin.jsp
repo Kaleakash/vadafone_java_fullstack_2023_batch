@@ -8,6 +8,7 @@
 </head>
 <body>
 <%! String emailid,password; %>
+
 <%
 emailid = request.getParameter("emailid");
 password = request.getParameter("pass");
@@ -17,7 +18,7 @@ if(emailid.equals("akash@gmail.com") && password.equals("123")){
 	out.println("successfully login");
 	//rd1.forward(request, response);
 	%>
-	<jsp:forward page="Home.jsp"></jsp:forward>
+		<jsp:forward page="Home.jsp"></jsp:forward>
 	<%
 }else {
 	out.println("failure try once again");
