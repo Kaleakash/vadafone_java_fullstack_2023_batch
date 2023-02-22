@@ -7,6 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h2>Store Product</h2>
+<form action="ProductController" method="post">
+	<label>PName</label>
+	<input type="text" name="pname"><br/>
+	<label>Price</label>
+	<input type="number" name="price"><br/>
+	<label>Quantity</label>
+	<input type="number" name="quantity"><br/>
+	<label>URL</label>
+	<input type="url" name="imageUrl"><br/>
+	<input type="submit" value="Store Product">
+	<input type="reset" value="reset">
+</form>
 </body>
 </html>
