@@ -11,14 +11,20 @@
 <%
 emailid = request.getParameter("emailid");
 password = request.getParameter("pass");
-RequestDispatcher rd1 = request.getRequestDispatcher("Home.jsp");
-RequestDispatcher rd2 = request.getRequestDispatcher("login.jsp");
+//RequestDispatcher rd1 = request.getRequestDispatcher("Home.jsp");
+//RequestDispatcher rd2 = request.getRequestDispatcher("login.jsp");
 if(emailid.equals("akash@gmail.com") && password.equals("123")){
 	out.println("successfully login");
-	rd1.forward(request, response);
+	//rd1.forward(request, response);
+	%>
+	<jsp:forward page="Home.jsp"></jsp:forward>
+	<%
 }else {
 	out.println("failure try once again");
-	rd2.include(request, response);
+	//rd2.include(request, response);
+			%>
+	<jsp:include page="login.jsp"></jsp:include>		
+			<%
 }
 %>
 </body>
