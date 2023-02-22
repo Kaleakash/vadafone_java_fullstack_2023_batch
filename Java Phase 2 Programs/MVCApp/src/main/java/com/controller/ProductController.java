@@ -46,9 +46,8 @@ public class ProductController extends HttpServlet {
 		pw.println("</div>");
 	}
 	
-	RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-	rd.include(request, response);
-	
+	//RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+	//rd.include(request, response);
 	
 	}
 
@@ -76,7 +75,7 @@ public class ProductController extends HttpServlet {
 		
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		rd.include(request, response);
-		
+		doGet(request, response);
 		
 	}
 
