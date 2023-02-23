@@ -34,24 +34,32 @@ public class Demo extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	
-	PrintWriter pw = response.getWriter();
+//	PrintWriter pw = response.getWriter();
+//	HttpSession hs = request.getSession();
+//	pw.println("<br/> Count value is "+count);
+//	count++;
+//	if(hs.isNew()) {
+//		pw.println("<br/> New Client");
+//	}else {
+//		pw.println("<br/> Old Client");
+//	}
+//	pw.println("<br/> Session Id "+hs.getId());
+//	pw.println("<br/> Session Creation time "+new Date(hs.getCreationTime()));
+//	pw.println("<br/> Sent last request time "+new Date(hs.getLastAccessedTime()));
+//	pw.println("<br/> Default session time "+hs.getMaxInactiveInterval());
+//	hs.setMaxInactiveInterval(600);
+//	pw.println("<br/>After set session time "+hs.getMaxInactiveInterval());
+//	if(count%5==0) {
+//		hs.invalidate();    // destroy the session. 
+//	}
+	
 	HttpSession hs = request.getSession();
-	pw.println("<br/> Count value is "+count);
-	count++;
 	if(hs.isNew()) {
-		pw.println("<br/> New Client");
+		response.sendRedirect("login.jsp");
 	}else {
-		pw.println("<br/> Old Client");
+		
 	}
-	pw.println("<br/> Session Id "+hs.getId());
-	pw.println("<br/> Session Creation time "+new Date(hs.getCreationTime()));
-	pw.println("<br/> Sent last request time "+new Date(hs.getLastAccessedTime()));
-	pw.println("<br/> Default session time "+hs.getMaxInactiveInterval());
-	hs.setMaxInactiveInterval(600);
-	pw.println("<br/>After set session time "+hs.getMaxInactiveInterval());
-	if(count%5==0) {
-		hs.invalidate();    // destroy the session. 
-	}
+	
 	}
 
 	/**
