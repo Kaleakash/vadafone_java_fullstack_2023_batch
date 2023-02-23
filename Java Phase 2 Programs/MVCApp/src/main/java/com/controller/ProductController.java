@@ -36,18 +36,18 @@ public class ProductController extends HttpServlet {
 	response.setContentType("text/html");
 	ProductService ps = new ProductService();
 	List<Product> listOfProduct = ps.findAllProduct();
-	pw.println("Number of product are "+listOfProduct.size());
-	Iterator<Product> ii = listOfProduct.iterator();
-	while(ii.hasNext()) {
-		Product p = ii.next();
-		pw.println("<div>");
-		pw.println("<img src="+p.getImageUrl()+" width=100 height=100/>");
-		pw.println("<span>Pid is "+p.getPid()+" PName is "+p.getPname()+"</span>");
-		pw.println("</div>");
-	}
-	
-	//RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-	//rd.include(request, response);
+//	pw.println("Number of product are "+listOfProduct.size());
+//	Iterator<Product> ii = listOfProduct.iterator();
+//	while(ii.hasNext()) {
+//		Product p = ii.next();
+//		pw.println("<div>");
+//		pw.println("<img src="+p.getImageUrl()+" width=100 height=100/>");
+//		pw.println("<span>Pid is "+p.getPid()+" PName is "+p.getPname()+"</span>");
+//		pw.println("</div>");
+//	}
+	request.setAttribute("listOfProduct", listOfProduct);
+	RequestDispatcher rd = request.getRequestDispatcher("viewProduct.jsp");
+	rd.include(request, response);
 	
 	}
 
