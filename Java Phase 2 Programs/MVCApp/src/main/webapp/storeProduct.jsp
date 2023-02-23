@@ -16,7 +16,7 @@
 	<label>Quantity</label>
 	<input type="number" name="quantity"><br/>
 	<label>URL</label>
-	<input type="text" name="imageUrl"><br/>
+	<input type="url" name="imageUrl"><br/>
 	<input type="submit" value="Store Product">
 	<input type="reset" value="reset">
 </form>
