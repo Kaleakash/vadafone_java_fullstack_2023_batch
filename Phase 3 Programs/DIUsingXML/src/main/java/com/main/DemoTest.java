@@ -13,10 +13,19 @@ public class DemoTest {
 //		Employee emp =new Employee();
 //		emp.display();
 
-		Resource res = new ClassPathResource("beans.xml");
-		BeanFactory bf = new XmlBeanFactory(res);
-		Employee emp1 = (Employee)bf.getBean("emp1");
-		emp1.display();
+		Resource res = new ClassPathResource("beans.xml");		// load xml file 
+		BeanFactory bf = new XmlBeanFactory(res);		// creating reference of bean factory 
+		Employee e1 = (Employee)bf.getBean("emp1");	// pull the object 	
+		e1.display();						// from container 
+		
+		Employee e2 = (Employee)bf.getBean("emp1");	// pull the object 	
+		e2.display();						// from container 
+		
+		Employee e3 = (Employee)bf.getBean("emp2");	// pull the object 	
+		e3.display();						// from container 
+		
+		Employee e4 = (Employee)bf.getBean("emp2");	// pull the object 	
+		e4.display();						// from container
 	}
 
 }
