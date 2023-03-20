@@ -9,14 +9,27 @@
 
 <bean class="com.pojo.Employee" id="emp3">
 	<constructor-arg value="100"></constructor-arg>
-	<constructor-arg value="Ravi"></constructor-arg>
+	<constructor-arg value="Ravi"></constructor-arg>	
 	<constructor-arg value="12000"></constructor-arg>
+	
 </bean>
 
 <bean class="com.pojo.Employee" id="emp4">
 	<property name="id" value="101"></property>
 	<property name="name" value="Ajay"></property>
 	<property name="salary" value="14000"></property>
+</bean>
+<!--  
+<bean class="com.pojo.Employee" id="emp5">
+	<constructor-arg value="100"></constructor-arg>
+	<constructor-arg value="Ravi"></constructor-arg>
+</bean>
+-->
+
+
+<bean class="com.pojo.Employee" id="emp6">
+	<property name="name" value="Lex"></property>
+	<property name="id" value="102"></property>
 </bean>
 
 </beans>
