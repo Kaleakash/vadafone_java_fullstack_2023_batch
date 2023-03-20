@@ -7,5 +7,11 @@
 
 <bean class="com.pojo.Employee" id="emp2" scope="prototype"></bean>
 
+<bean class="com.pojo.Employee" id="emp3">
+	<constructor-arg value="100"></constructor-arg>
+	<constructor-arg value="Ravi"></constructor-arg>
+	<constructor-arg value="12000"></constructor-arg>
+</bean>
+
 
 </beans>
