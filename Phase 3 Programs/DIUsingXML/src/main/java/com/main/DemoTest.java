@@ -31,9 +31,12 @@ public class DemoTest {
 		Employee e1 = (Employee)bf.getBean("emp1");
 		Employee e2 = (Employee)bf.getBean("emp2");
 		Employee e3 = (Employee)bf.getBean("emp3");
+		Employee e4= (Employee)bf.getBean("emp3");
+		e4.setSalary(24000);
 	System.out.println(e1);			// it will call tostring	singleton
 	System.out.println(e2);			// it will call tostring 	each time new memory
 	System.out.println(e3);			
+	System.out.println(e4);
 	}
 
 }
