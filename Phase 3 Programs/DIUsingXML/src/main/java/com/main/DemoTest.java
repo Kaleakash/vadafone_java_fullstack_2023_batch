@@ -41,6 +41,7 @@ public class DemoTest {
 //	System.out.println(e4);
 //	System.out.println(e5);	
 //	System.out.println(e6);
+		
 		Employee e7 = (Employee)bf.getBean("emp7");
 		System.out.println(e7);
 	}

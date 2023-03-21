@@ -37,11 +37,15 @@
 	<property name="state" value="Kar"></property>
 </bean>
 
-<bean class="com.pojo.Employee" id="emp7">
+<bean class="com.pojo.Address" id="add">
+	<property name="city" value="Mumbai"></property>
+	<property name="state" value="Mh"></property>
+</bean>
+<bean class="com.pojo.Employee" id="emp7" autowire="byName">
 	<property name="id" value="103"></property>
 	<property name="name" value="Neena"></property>
 	<property name="salary" value="34000"></property>
-	<property name="add" ref="add1"></property>
+<!-- 	<property name="add" ref="add1"></property>  -->
 </bean>
 
 
