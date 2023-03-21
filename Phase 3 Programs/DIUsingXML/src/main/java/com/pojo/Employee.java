@@ -5,7 +5,7 @@ private int id;
 private String name;
 private float salary;
 private Address add;
-
+//private Address padd;
 	public Address getAdd() {
 	return add;
 }
