@@ -20,7 +20,8 @@ public class DemoTest {
 //		System.out.println(emp);
 		
 		
-		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(MyConfiguration.class);
+		AnnotationConfigApplicationContext ac = 
+				new AnnotationConfigApplicationContext(MyConfiguration.class);
 		Employee emp = (Employee)ac.getBean("employee");
 		System.out.println(emp);
 		emp.setId(100);
