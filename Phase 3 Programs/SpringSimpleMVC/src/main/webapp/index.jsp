@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h2>Spring MVC Simple Project</h2>
+	<a href="hello">Click Here</a>
 </body>
 </html>
