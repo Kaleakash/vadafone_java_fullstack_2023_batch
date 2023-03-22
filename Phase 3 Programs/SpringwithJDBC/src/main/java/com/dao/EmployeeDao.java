@@ -67,6 +67,25 @@ return jdbcTemplate.update("insert into employee values(?,?,?)",emp.getId(),emp.
 	}
 	}
 
+	public int deleteEmployee(int id) {
+		try {
+return jdbcTemplate.update("delete from employee where id = ?",id);
+		}catch (Exception e) {
+			System.out.println(e);
+			return 0;
+		}
+		}
+	
+	
+	public int updateEmployee(Employee emp) {
+		try {
+return jdbcTemplate.update("update employee set salary = ? where id = ?",emp.getSalary(),emp.getId());
+		}catch (Exception e) {
+			System.out.println(e);
+			return 0;
+		}
+		}
+	
 	
 	public List<Map<String,Object>> getAllEmployeeInfo() {
 	

@@ -41,6 +41,22 @@ public class EmployeeService {
 		}
 	}
 	
+	public String deletEmployee(int id) {
+		if(employeeDao.deleteEmployee(id)>0) {
+			return "Record deleted successfully";
+		}else {
+			return "Record not present";
+		}
+	}
+	
+	public String updateEmployeeSalary(Employee emp) {
+		if(employeeDao.updateEmployee(emp)>0) {
+			return "Employee record updated successfully";
+		}else {
+			return "Record didn't update";
+		}
+	}
+	
 	public List<Map<String, Object>> findAllEmployee() {
 		return employeeDao.getAllEmployeeInfo();
 	}

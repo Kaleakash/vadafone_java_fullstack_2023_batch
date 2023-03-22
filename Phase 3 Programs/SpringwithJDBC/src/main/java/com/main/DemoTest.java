@@ -48,13 +48,26 @@ ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
 //	System.out.println(result);
 	
 	// retrieve query using jdbcTemplate
-EmployeeService es = (EmployeeService)ac.getBean("employeeService");
-	List<Map<String, Object>> mm = es.findAllEmployee();
-	Iterator<Map<String, Object>> li = mm.iterator();
-	while(li.hasNext()) {
-		Map<String, Object> m = li.next();
-		System.out.println(m);
-	}
+//EmployeeService es = (EmployeeService)ac.getBean("employeeService");
+//	List<Map<String, Object>> mm = es.findAllEmployee();
+//	Iterator<Map<String, Object>> li = mm.iterator();
+//	while(li.hasNext()) {
+//		Map<String, Object> m = li.next();
+//		System.out.println(m);
+//	}
+	
+	//Delete query using jdbcTemplate 
+//	EmployeeService es = (EmployeeService)ac.getBean("employeeService");
+//	String result = es.deletEmployee(1);
+//	System.out.println(result);
+
+	// Update Query 
+	EmployeeService es = (EmployeeService)ac.getBean("employeeService");
+	Employee emp = (Employee)ac.getBean("employee");
+	emp.setId(2);
+	emp.setSalary(40000);
+	String result = es.updateEmployeeSalary(emp);
+	System.out.println(result);
 	}
 
 }
