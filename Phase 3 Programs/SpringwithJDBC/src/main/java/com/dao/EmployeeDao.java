@@ -2,6 +2,9 @@ package com.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -28,5 +31,25 @@ public class EmployeeDao {
 			System.out.println(e);
 			return 0;
 		}
+	}
+	
+	public List<Employee> getAllEmployeeInfo() {
+		List<Employee> listOfEmp = new ArrayList<Employee>();
+		try {
+					Connection con = ds.getConnection();
+			PreparedStatement pstmt  = con.prepareStatement("select * from employee");
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+					Employee emp = new Employee();
+						emp.setId(rs.getInt(1));
+							emp.setName(rs.getString(2));
+								emp.setSalary(rs.getFloat(3));
+				listOfEmp.add(emp);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		return listOfEmp;
 	}
 }
