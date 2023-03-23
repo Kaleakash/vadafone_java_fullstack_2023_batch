@@ -17,7 +17,7 @@
 <input type="reset" value="reset"/>
 </form>
 <hr/>
-
+${requestScope.msg}	
 <h2>Login page with db</h2>
 <form action="signInFromDb" method="post">
 <label>EmailId</label>

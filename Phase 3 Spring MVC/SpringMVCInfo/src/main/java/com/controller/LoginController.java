@@ -46,12 +46,35 @@ public class LoginController {
 		
 		System.out.println(result);						// dislay result on console 
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("signUp.jsp");					// redirect to same signup page. 
-		mav.addObject("msg", result);		// request.setAttribute("msg",result);
+			mav.setViewName("signUp.jsp");					// redirect to same signup page. 
+			mav.addObject("msg", result);		// request.setAttribute("msg",result);
 		return mav;
 	}
 	
-	
+	@RequestMapping(value = "signInFromDb",method = RequestMethod.POST)
+	public ModelAndView signIn(HttpServletRequest req, Login login) {	// di for 
+																// req object and login pojo 
+		String emailid = req.getParameter("emailid");
+		String password = req.getParameter("password");		// receive the value from signup page
+		
+		login.setEmailid(emailid);
+		login.setPassword(password);					// set the value for login object 
+		
+		String result = loginService.signIn(login);		// call service method 
+		
+
+		ModelAndView mav = new ModelAndView();
+		if(result.equals("success")) {
+			
+			mav.addObject("msg", "Welcome to home page "+emailid);
+			mav.setViewName("home.jsp");
+			
+		}else {
+			mav.addObject("msg", result);
+			mav.setViewName("login.jsp");
+		} 
+		return mav;
+	}
 	
 	
 }
