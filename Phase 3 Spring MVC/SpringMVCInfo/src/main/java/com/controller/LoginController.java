@@ -61,13 +61,13 @@ public class LoginController {
 		login.setPassword(password);					// set the value for login object 
 		
 		String result = loginService.signIn(login);		// call service method 
-		
+		System.out.println(result);
 
 		ModelAndView mav = new ModelAndView();
 		if(result.equals("success")) {
 			
 			mav.addObject("msg", "Welcome to home page "+emailid);
-			mav.setViewName("home.jsp");
+				mav.setViewName("home.jsp");
 			
 		}else {
 			mav.addObject("msg", result);
