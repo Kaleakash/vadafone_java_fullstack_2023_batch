@@ -22,7 +22,7 @@ public class LoginService {
 	
 	public String signUp(Login login) {
 		if(loginDao.signUp(login)>0) {
-			return "Account creted";
+			return "Account created";
 		}else {
 			return "Account didn't create";
 		}

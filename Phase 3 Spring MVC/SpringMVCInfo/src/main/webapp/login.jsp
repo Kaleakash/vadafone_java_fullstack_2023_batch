@@ -16,5 +16,18 @@
 <input type="submit" value="submit"/>
 <input type="reset" value="reset"/>
 </form>
+<hr/>
+
+<h2>Login page with db</h2>
+<form action="signInFromDb" method="post">
+<label>EmailId</label>
+<input type="email" name="emailid"><br/>
+<label>Password</label>
+<input type="password" name="password"><br/>
+<input type="submit" value="submit"/>
+<input type="reset" value="reset"/>
+</form>
+<br/>
+<a href="signUp.jsp">SignUp</a>
 </body>
 </html>
