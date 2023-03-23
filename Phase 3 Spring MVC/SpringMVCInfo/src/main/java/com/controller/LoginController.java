@@ -75,6 +75,13 @@ public class LoginController {
 		} 
 		return mav;
 	}
+	@RequestMapping(value = "logout",method = RequestMethod.GET)
+	public ModelAndView logOut(HttpServletRequest req) {
+		req.removeAttribute("msg");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("index.jsp");
+		return mav;
+	}
 	
 	
 }

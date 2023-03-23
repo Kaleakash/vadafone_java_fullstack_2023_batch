@@ -8,5 +8,13 @@
 </head>
 <body>
 ${requestScope.msg}	
+<a href="#">First Link</a> |
+<a href="#">Second Link</a> |
+<a href="#">Third Link</a> |
+<a href="#">Fourth Link</a> |
+<br/>
+<form action="logout">
+<input type="submit" value="Logout">
+</form>
 </body>
 </html>
