@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Welcome to Spring boot MVC application</h2>
-<a href="login">Login Page</a>
+<h2>Failure try once again</h2>
 </body>
 </html>

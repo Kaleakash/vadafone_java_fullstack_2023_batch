@@ -13,4 +13,11 @@ public class MyController {
 		// coding...
 		return "demo";
 	}
+	
+	@RequestMapping(value = "login",method = RequestMethod.GET)
+	public String openLoginPage() {
+		// coding...
+		return "login";
+	}
+	
 }
