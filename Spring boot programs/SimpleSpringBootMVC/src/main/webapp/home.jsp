@@ -8,5 +8,6 @@
 </head>
 <body>
 <h2>Welcome to Home page</h2>
+<a href="openStoreProduct">Add Product</a>
 </body>
 </html>
