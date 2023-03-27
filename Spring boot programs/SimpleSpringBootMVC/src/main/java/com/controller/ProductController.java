@@ -26,7 +26,7 @@ public class ProductController {
 	// store the product 
 	
 	@RequestMapping(value = "storeProduct",method = RequestMethod.POST)
-	public String storeProduct(HttpServletRequest req,Product product) {
+	public String storeProductInfo(HttpServletRequest req,Product product) {
 		// receive value from form and done the type casting 
 		int pid = Integer.parseInt(req.getParameter("pid"));
 		String pname  = req.getParameter("pname");
@@ -37,7 +37,7 @@ public class ProductController {
 		product.setPrice(price);
 		// class service method 
 		String result = productService.storeProduct(product);
-		req.setAttribute("msg", result);
+			req.setAttribute("msg", result);
 		System.out.println(result);
 		return "storeProduct";
 	}
