@@ -14,9 +14,9 @@ import com.bean.Employee;
 public class EmployeeController {
 	
 	
-	//http://localhost:8080/addEmployee
+	//http://localhost:8080/displayEmployee
 
-	@RequestMapping(value = "addEmployee",method = RequestMethod.GET)
+	@RequestMapping(value = "displayEmployee",method = RequestMethod.GET)
 	public String displayEmployeeInfo(Model mm) {
 		
 		List<Employee> al = new ArrayList<>();
