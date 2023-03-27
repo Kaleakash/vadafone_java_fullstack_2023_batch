@@ -33,7 +33,7 @@ public class EmployeeController {
 	
 	@RequestMapping(value = "saveEmployee",method = RequestMethod.GET)
 	public String saveEmployee(Model mm, Employee emp) {  // DI for model and employee 
-		System.out.println(emp);
+			System.out.println(emp);
 		return "addEmployee";
 	}
 	
