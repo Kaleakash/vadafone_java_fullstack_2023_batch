@@ -1,7 +1,12 @@
 package com.entity;
 
+import java.time.LocalDate;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.springframework.stereotype.Component;
 
@@ -12,6 +17,23 @@ public class Product {
 private int pid;
 private String pname;
 private float price;
+@Column(name="imageurl")
+private String imageUrl;
+@Column(name="dateinfo")
+private LocalDate dateInfo;
+
+public LocalDate getDateInfo() {
+	return dateInfo;
+}
+public void setDateInfo(LocalDate dateInfo) {
+	this.dateInfo = dateInfo;
+}
+public String getImageUrl() {
+	return imageUrl;
+}
+public void setImageUrl(String imageUrl) {
+	this.imageUrl = imageUrl;
+}
 public int getPid() {
 	return pid;
 }

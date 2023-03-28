@@ -14,6 +14,8 @@
 	<input type="text" th:field="*{pname}"/><br/>
 	<label>Price</label>
 	<input type="text" th:field="*{price}"/><br/>
+	<label>Image URL</label>
+	<input type="text" th:field="*{imageUrl}"/><br/>
 	<input type="submit" value="submit"/>
 	<input type="reset" value="reset"/>
 </form>
@@ -23,14 +25,22 @@
 
 <table border="1">
 	<tr>
-		<th>Id</th>
-		<th>Name</th>
-		<th>Salary</th>	
+		<th>PId</th>
+		<th>PName</th>
+		<th>Price</th>	
+		<th>Image URL</th>
+		<th>Date Details</th>
+		<th>Delete Product</th>
+		<th>Update Product</th>
 	</tr>
 	<tr th:each="product:${products}">
 		<td th:text="${product.pid}"></td>
 		<td th:text="${product.pname}"></td>
 		<td th:text="${product.price}"></td>
+		<td><img th:src="${product.imageUrl}" width="50px" height="50px"/></td>
+		<td th:text="${product.dateInfo}"></td>
+		<td><a th:href="@{/deleteProduct/{pid} (pid=${product.pid}) }">Delete Product</a></td>
+		<td><a th:href="@{/openUpdateForm/{pid} (pid=${product.pid}) }">Update Product</a></td>
 	</tr>
 </table>
 </body>
