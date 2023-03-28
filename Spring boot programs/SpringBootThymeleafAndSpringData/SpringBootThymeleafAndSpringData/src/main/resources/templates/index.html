@@ -6,6 +6,21 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h2>Add Product</h2>
+<form action="#" th:action="@{/saveProduct}" th:object="${product}" method="post">
+	<label>PId</label>
+	<input type="text" th:field="*{pid}"/><br/>
+	<label>PName</label>
+	<input type="text" th:field="*{pname}"/><br/>
+	<label>Price</label>
+	<input type="text" th:field="*{price}"/><br/>
+	<input type="submit" value="submit"/>
+	<input type="reset" value="reset"/>
+</form>
+<h2 th:text="${msg}"></h2>
+<br/>
+<hr/>
+
 <table border="1">
 	<tr>
 		<th>Id</th>

@@ -19,10 +19,24 @@ public class ProductController {
 	
 	
 	@RequestMapping(value = "/",method = RequestMethod.GET)
-	public String allProduct(Model mm) {
-		List<Product> listOfProduct = productService.findAllProduct();
+	public String allProduct(Model mm,Product product) { // DI for Product 
+	List<Product> listOfProduct = productService.findAllProduct();
 		System.out.println("size "+listOfProduct.size());
-		mm.addAttribute("products", listOfProduct);
+		mm.addAttribute("products", listOfProduct);	// store listof product with name as products
+		mm.addAttribute("product", product);		// store product object with name product 
 		return "index";
 	}
+	
+	@RequestMapping(value = "saveProduct",method = RequestMethod.POST)
+	public String storeProdut(Model mm,Product product) {
+		
+	//System.out.println(product);
+		String result = productService.storeProduct(product);
+		List<Product> listOfProduct = productService.findAllProduct();
+		mm.addAttribute("msg", result);
+		mm.addAttribute("products", listOfProduct);
+		mm.addAttribute("product", product);
+		return "index";
+	}
+
 }

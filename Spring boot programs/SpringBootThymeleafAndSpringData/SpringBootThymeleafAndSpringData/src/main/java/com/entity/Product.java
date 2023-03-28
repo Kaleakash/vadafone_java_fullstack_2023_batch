@@ -3,7 +3,10 @@ package com.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.springframework.stereotype.Component;
+
 @Entity
+@Component
 public class Product {
 @Id
 private int pid;
@@ -26,6 +29,10 @@ public float getPrice() {
 }
 public void setPrice(float price) {
 	this.price = price;
+}
+@Override
+public String toString() {
+	return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + "]";
 }
 
 }
