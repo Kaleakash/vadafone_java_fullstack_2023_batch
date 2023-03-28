@@ -1,10 +1,12 @@
 package com.entity;
 
+import java.sql.Blob;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -28,6 +30,8 @@ public LocalDate getDateInfo() {
 public void setDateInfo(LocalDate dateInfo) {
 	this.dateInfo = dateInfo;
 }
+
+
 public String getImageUrl() {
 	return imageUrl;
 }

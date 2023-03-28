@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.entity.Product;
 import com.service.ProductService;
 
@@ -61,6 +60,10 @@ public class ProductController {
 	
 	@RequestMapping(value = "updateProduct",method = RequestMethod.POST)
 	public String updateProduct(Model mm,Product product) {
+//		order.setPrice(product.getPrice());
+//		order.setProductname(product.getPname());
+//		order.setQty(10);
+//		order.setCustomername("akash@gmail.com");
 		
 		String result = productService.updateProduct(product);
 		List<Product> listOfProduct = productService.findAllProduct();
