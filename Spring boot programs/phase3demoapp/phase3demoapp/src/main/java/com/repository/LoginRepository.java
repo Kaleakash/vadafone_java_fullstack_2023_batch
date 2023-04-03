@@ -15,4 +15,10 @@ public interface LoginRepository extends JpaRepository<Login, String>{
 	public Login signIn(@Param("emailid") String emailid, 
 			@Param("password") String password, 
 			@Param("typeofuser") String typeofuser);
+	
+	// Native Query 
+	@Query(value="select * from login l where l.emailid = :emailid and l.password = :password and l.typeofuser=:typeofuser",nativeQuery = true)
+	public Login signInWithNative(@Param("emailid") String emailid, 
+			@Param("password") String password, 
+			@Param("typeofuser") String typeofuser);
 }
