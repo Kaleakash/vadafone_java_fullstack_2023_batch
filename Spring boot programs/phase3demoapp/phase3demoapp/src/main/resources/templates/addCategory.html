@@ -6,9 +6,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Welcome to Admin Home Page</h2>
-<a th:href="@{/addCategoryPage}">Add Category</a> |
-<a th:href="@{/viewCategoryPage}">View Category</a> |
-<a th:href="@{/addProductPage}">Add Product</a> |
+	<span th:text="${msg}"></span>
+	<h2>Add Category</h2>
+	<form action="#" th:action="@{/storeCategoryInfo}" th:object="${category}" method="post">
+<label>CategoryName</label>
+<input type="text" th:field="*{categoryname}"/><br/>
+<input type="submit" value="Store Category"/>
+</form>
+<br/>
+<a th:href="@{/adminHome}">Back</a>
 </body>
 </html>

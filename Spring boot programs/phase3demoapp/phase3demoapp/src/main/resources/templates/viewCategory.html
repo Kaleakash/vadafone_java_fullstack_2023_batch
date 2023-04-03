@@ -6,9 +6,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Welcome to Admin Home Page</h2>
-<a th:href="@{/addCategoryPage}">Add Category</a> |
-<a th:href="@{/viewCategoryPage}">View Category</a> |
-<a th:href="@{/addProductPage}">Add Product</a> |
+
+<table border="1">
+	<tr>
+		<th>CategoryId</th>
+		<th>Category Name</th>
+		
+	</tr>
+	<tr th:each="cc:${category}">
+		<td th:text="${cc.cid}"></td>
+		<td th:text="${cc.categoryname}"></td>
+	</tr>
+</table>
+<br/>
+<a th:href="@{/adminHome}">Back</a>
 </body>
 </html>

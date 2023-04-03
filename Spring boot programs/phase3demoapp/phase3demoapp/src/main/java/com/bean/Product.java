@@ -27,6 +27,13 @@ private List<Orders> listOfOrders;
 public int getPid() {
 	return pid;
 }
+
+@Override
+public String toString() {
+	return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + ", qty=" + qty + ", categoryid="
+			+ categoryid + ", productimage=" + productimage + ", listOfOrders=" + listOfOrders + "]";
+}
+
 public void setPid(int pid) {
 	this.pid = pid;
 }
