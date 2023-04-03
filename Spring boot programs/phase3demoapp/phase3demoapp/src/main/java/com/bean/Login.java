@@ -1,7 +1,11 @@
 package com.bean;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Login {
@@ -9,6 +13,9 @@ public class Login {
 private String emailid;
 private String password;
 private String typeofuser;
+@OneToMany
+@JoinColumn(name="emailid")	// FK 
+private List<Orders> listOfOrders;
 public String getEmailid() {
 	return emailid;
 }
