@@ -1,6 +1,7 @@
 package com.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,5 +22,14 @@ public class ProductService {
 	
 	public List<Product> findAllProduts() {
 		return productRepository.findAll();
+	}
+	
+	public void decrementQty(int pid) {
+		Optional<Product> result = productRepository.findById(pid);
+		if(result.isPresent()) {
+			Product p = result.get();
+			p.setQty(p.getQty()-1);
+			productRepository.saveAndFlush(p);	// like update 
+		}
 	}
 }

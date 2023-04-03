@@ -48,13 +48,14 @@ public class ProductController {
 		System.out.println(pp);  
 		return "addProduct";
 	}
-//	
-//	
-//	@RequestMapping(value = "/viewProductPage",method = RequestMethod.GET)
-//	public String viewProduct(Model mm, Product pp) {
-//		List<Product> listOfProducts = productService.findAllProduts();
-//		mm.addAttribute("product", listOfProducts);
-//		return "viewProduct";
-//	}
+	
+	
+	@RequestMapping(value = "/viewProductDetailsByCustomer",method = RequestMethod.GET)
+	public String viewProduct(Model mm, Product pp) {
+		List<Product> listOfProducts = productService.findAllProduts();
+		mm.addAttribute("products", listOfProducts);
+		
+		return "viewProductsByCustomer";
+	}
 	
 }

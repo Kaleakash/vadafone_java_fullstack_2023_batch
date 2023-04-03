@@ -19,6 +19,13 @@ private List<Orders> listOfOrders;
 public String getEmailid() {
 	return emailid;
 }
+
+@Override
+public String toString() {
+	return "Login [emailid=" + emailid + ", password=" + password + ", typeofuser=" + typeofuser + ", listOfOrders="
+			+ listOfOrders + "]";
+}
+
 public void setEmailid(String emailid) {
 	this.emailid = emailid;
 }

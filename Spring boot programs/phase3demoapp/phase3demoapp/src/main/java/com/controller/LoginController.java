@@ -1,5 +1,7 @@
 package com.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,10 +31,11 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/signIn",method = RequestMethod.POST)
-	public String signIn(Model mm, Login ll) {
+	public String signIn(Model mm, Login ll,HttpSession hs) {
 		String result = loginService.signIn(ll);
 		
 		if(result.equals("Customer login successfully")) {
+			hs.setAttribute("emailid", ll.getEmailid());		// stored session object of that person 
 			return "customerHome";
 		}else if(result.equals("Admin login successfully")) {
 			return "adminHome";
