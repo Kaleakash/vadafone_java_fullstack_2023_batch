@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function readData() {
+            // read text field value using name attribute 
+            // var fname = document.getElementsByName("uname")[0].value;
+            // var lname = document.getElementsByName("uname")[1].value;
+            // alert("your name is "+fname+" "+lname);
+
+            // read text field value using id attribute 
+            var fname = document.getElementById("u1").value;
+            var lname = document.getElementById("u2").value;
+            alert("Your name is "+fname+" "+lname); 
+        }
+    </script>
+</head>
+<body>
+    <label>FName</label>
+<input type="text" name="uname" id="u1"/><br/>
+    <label>LName</label>
+<input type="text" name="uname" id="u2"/><br/>
+    <input type="button" value="Click Here" onclick="readData()"/>
+</body>
+</html>
