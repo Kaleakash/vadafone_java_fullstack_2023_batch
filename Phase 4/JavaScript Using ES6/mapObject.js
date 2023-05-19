@@ -12,4 +12,5 @@ document.write("<br> names is "+mm.get(1));
 document.write("<br> names is "+mm.get(100));
 document.write("<br> "+mm.has(1))
 document.write("<br> "+mm.has(100))
-mm.forEach((v,k)=>document.write("<br> Key "+k+" Value "+v))
+//mm.forEach((v,k)=>document.write("<br> Key "+k+" Value "+v))
+mm.forEach((v,k)=>document.write("<br> value "+v+" Key "+k));
