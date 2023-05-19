@@ -82,9 +82,9 @@
 
 // num1.forEach(n=>document.write("<br/>Value is "+n));
 
-//let num1 = [10,11,15,20,30,35,40,50,55,60,62];
-//num1.map(e=>e+2).forEach(v=>document.write(" "+v));
-//num1.filter(v=> v%2 != 0 ).forEach(v=>document.write(" "+v));
+let num1 = [10,11,15,20,30,35,40,50,55,60,62];
+//num1.map(e=>e+5).forEach(v=>document.write(" "+v));
+num1.filter(v=> v % 2 == 0 ).forEach(v=>document.write(" "+v));
 
 
 
