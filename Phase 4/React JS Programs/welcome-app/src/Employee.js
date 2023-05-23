@@ -12,7 +12,9 @@ class Employee extends React.Component {
         return(
             <div>
                 <h2>Employee component in class style</h2>
-                <p>Id is {this.state.id} Name is {this.state.name} Age is {this.state.age}</p>
+    <p>Id is {this.state.id} Name is {this.state.name} 
+                Age is {this.state.age}</p>
+                <p>Designation is {this.props.designation}</p>
             </div>
         )
     }

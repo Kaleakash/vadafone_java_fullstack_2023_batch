@@ -47,8 +47,8 @@ function App() {
     <div>
       <Header></Header>
       <h2>Main or Parent Component</h2>
-      <Employee></Employee>
-      <Customer></Customer>
+  <Employee designation="Developer"></Employee>
+      <Customer designation="Tester"></Customer>
     </div>
   )
 }
