@@ -9,6 +9,7 @@ class Employee extends React.Component {
     }
 
     render() {
+        this.setState({id:101,name:"Vijay",age:24});  
         return(
             <div>
                 <h2>Employee component in class style</h2>

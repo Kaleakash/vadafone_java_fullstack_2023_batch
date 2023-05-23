@@ -41,14 +41,16 @@
 import Header from './Header'
 import Employee from './Employee';
 import Customer from './Customer';
+import FunctionStyleEvent from './FunctionStyleEvent';
 function App() {
-
+// This is normal javascript comments. 
   return(
     <div>
-      <Header></Header>
+      {/* <Header></Header>
       <h2>Main or Parent Component</h2>
   <Employee designation="Developer"></Employee>
-      <Customer designation="Tester"></Customer>
+      <Customer designation="Tester"></Customer> */}
+      <FunctionStyleEvent></FunctionStyleEvent>
     </div>
   )
 }
