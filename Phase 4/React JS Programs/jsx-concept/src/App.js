@@ -43,8 +43,10 @@ function Hello() {
   return <h1>Hello</h1>
 }
 function ConditionalJSX() {
-  let result = useState(true);
+  let result = useState(false);
+
   return(
+  
     <div>
       {!result ? <Hi></Hi>  :<Hello></Hello>}
     </div>
