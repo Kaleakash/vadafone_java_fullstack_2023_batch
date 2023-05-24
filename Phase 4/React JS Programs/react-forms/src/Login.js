@@ -7,7 +7,7 @@ let [password,setPassword]=useState("");
 let changeValue= function(event){
     let name = event.target.name;       // text field name
     let value = event.target.value;     // text field value 
-    //console.log(name+" "+value);
+    console.log(name+" "+value);
     if(name=="emailid"){
         setEmailId(value);
     }else if(name=="password"){
