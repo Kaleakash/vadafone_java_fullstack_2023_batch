@@ -13,7 +13,6 @@ let changeValue= function(event){
     }else if(name=="password"){
         setPassword(value);
     }
-    
 }
 let verifyUser= function(event){
     event.preventDefault();
@@ -32,6 +31,18 @@ let verifyUser= function(event){
             <input type="text" name="emailid" onChange={changeValue}/><br/>
                 <label>Password</label>
                 <input type="password" name="password" onChange={changeValue}/><br/>
+                <input type="submit" value="submit"/>
+                <input type="reset" value="reset"/>
+            </form>
+            <hr/>
+            <h2>Login Page</h2>
+            <form onSubmit={verifyUser}>
+                <label>EmailId</label>
+                <input type="text" name="emailid" 
+                onChange={(event)=>setEmailId(event.target.value)}/><br/>
+                <label>Password</label>
+                <input type="password" name="password" 
+                onChange={(event)=>setPassword(event.target.value)}/><br/>
                 <input type="submit" value="submit"/>
                 <input type="reset" value="reset"/>
             </form>
