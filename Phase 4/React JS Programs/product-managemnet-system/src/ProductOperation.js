@@ -42,9 +42,15 @@ let addProduct = function(event){           // adding data through 2nd form
     }
 
    }else {
-        alert("We will do update operation")
+        //alert("We will do update operation")
+        let tempProducts = [...products];   // store all product in tempProducts;
+        let index = tempProducts.findIndex(p=>p.pid==product.pid); // search product index number
+    // 1st paramteter index position and 2nd number of record to delete, and add new product in that location. 
+    tempProducts.splice(index,1,product);   // move that index position the remove 1 product 
+    setProducts(tempProducts);      // then tempProducts add in setProducts function 
+    setButton("Add Product");
    }
-   
+   setProduct({pid:0,pname:"",price:0.0,url:""});   //reset the value 
 
 
 }
