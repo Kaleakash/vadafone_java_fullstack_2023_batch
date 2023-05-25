@@ -83,62 +83,62 @@ let resetFun= (event)=> {
             <input type="button" value="Delete Product" 
             onClick={(event)=> {
                 deleteProduct(event,p.pid);}}
-            />
+             className="btn btn-danger"/>
         </td> 
         <td>
         <input type="button" value="Update Product" 
             onClick={(event)=> {
                 updateProduct(event,p);}}
-            />
+             className="btn btn-info"/>
         </td> 
     </tr>)
     return(
-        <div>
+        <div className="container">
             <h2 className="myClass">Add Product 1st </h2>
-        <form onSubmit={storeProduct}>
+        <form onSubmit={storeProduct} className="form-group">
             <label>PId</label>
-            <input type="number" name="pid" onChange={(event)=>setPId(event.target.value)}/><br/>
+            <input type="number" className="form-control" name="pid" onChange={(event)=>setPId(event.target.value)}/><br/>
             <label>PName</label>
-            <input type="text" name="pname" onChange={(event)=>setPName(event.target.value)}/><br/>
+            <input type="text" className="form-control" name="pname" onChange={(event)=>setPName(event.target.value)}/><br/>
             <label>Price</label>
-            <input type="decimal" name="price" onChange={(event)=>setPrice(event.target.value)}/><br/>
+            <input type="decimal" className="form-control" name="price" onChange={(event)=>setPrice(event.target.value)}/><br/>
             <label>URL</label>
-            <input type="url" name="url" onChange={(event)=>setUrl(event.target.value)}/><br/>
-            <input type="submit" value="Add Product"/>
-            <input type="reset" value="reset"/>
+            <input type="url" className="form-control" name="url" onChange={(event)=>setUrl(event.target.value)}/><br/>
+            <input type="submit" value="Add Product" className="btn btn-success"/>
+            <input type="reset" value="reset" className="btn btn-info"/>
         </form>    
         <hr/>
         <h2>Add Product 2nd </h2>
-        <form onSubmit={addProduct}>
+        <form onSubmit={addProduct} className="form-group">
             <label>PId</label>
-            <input type="number" name="product.pid" value={product.pid} onChange={(event)=>
+            <input type="number" className="form-control" name="product.pid" value={product.pid} onChange={(event)=>
             setProduct((previousValue)=> {
                 return {...previousValue,pid:event.target.value}
             })
             }/><br/>
             <label>PName</label>
-            <input type="text" name="product.pname"  value={product.pname} onChange={(event)=>
+            <input type="text" className="form-control" name="product.pname"  value={product.pname} onChange={(event)=>
             setProduct((previousValue)=> {
                 return {...previousValue,pname:event.target.value}
             })
             }/><br/>
             <label>Price</label>
-            <input type="decimal" name="product.price"  value={product.price} onChange={(event)=>
+            <input type="decimal" className="form-control" name="product.price"  value={product.price} onChange={(event)=>
             setProduct((previousValue)=> {
                 return {...previousValue,price:event.target.value}
             })
             }/><br/>
             <label>URL</label>
-            <input type="url" name="product.url"  value={product.url} onChange={(event)=>
+            <input type="url" className="form-control" name="product.url"  value={product.url} onChange={(event)=>
             setProduct((previousValue)=> {
                 return {...previousValue,url:event.target.value}
             })
             }/><br/>
-            <input type="submit" value={b1}/>
-            <input type="reset" value="reset" onClick={resetFun}/>
+            <input type="submit" value={b1} className="btn btn-primary"/>
+            <input type="reset" value="reset" onClick={resetFun} className="btn btn-secondary"/>
         </form>    
 
-          <table border="1">
+          <table className="table table-stripped">
             <thead>
                 <tr>
                     <th>PId</th>
