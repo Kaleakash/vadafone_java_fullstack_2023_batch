@@ -32,7 +32,8 @@ let addProduct = function(event){           // adding data through 2nd form
 let deleteProduct=function(event,pid){
     //console.log(pid);
     let tempProducts = [...products];   // store all product in tempProducts;
-    let index = tempProducts.find(p=>pid==pid); // search product index number 
+    let index = tempProducts.findIndex(p=>p.pid==pid); // search product index number
+    // 1st paramteter index position and 2nd number of record to delete 
     tempProducts.splice(index,1);   // move that index position the remove 1 product 
     setProducts(tempProducts);      // then tempProducts add in setProducts function 
 
