@@ -18,16 +18,25 @@ let storeProduct=function(event){       //adding data through 1st form
     //console.log(pid+" "+pname+" "+price+" "+url);
     let productData = {"pid":pid,"pname":pname,"price":price,"url":url};    // convert all individal property to object
     //console.log(productData);
+    let result = products.find(p=>p.pid==pid);
+    if(result==undefined){
     setProducts((previousProduct)=> {
         return [...previousProduct,productData];
-    })
+    })}else {
+        alert("Pid must be unique");
+    }
 }
 let addProduct = function(event){           // adding data through 2nd form 
     event.preventDefault();
    // console.log(product);
+   let result = products.find(p=>p.pid==product.pid);
+   if(result==undefined){
    setProducts((previousProduct)=> {
     return [...previousProduct,product];
 })
+   }else {
+    alert("Pid must be unique");
+   }
 }
 let deleteProduct=function(event,pid){
     //console.log(pid);
