@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
      <h2>Product Management System</h2>
-     <Students></Students>
+     {/* <Students></Students> */}
      <ProductOperation></ProductOperation>
     </div>
   );
