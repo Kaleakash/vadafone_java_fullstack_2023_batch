@@ -1,6 +1,7 @@
 import { useState } from "react";
 function ProductOperation() {
 
+let [b1,setButton]=useState("Add Product");     // to change button value;
 
 let [pid,setPId]=useState(0);           // 1st forms 
 let [pname,setPName]=useState("");
@@ -29,14 +30,23 @@ let storeProduct=function(event){       //adding data through 1st form
 let addProduct = function(event){           // adding data through 2nd form 
     event.preventDefault();
    // console.log(product);
-   let result = products.find(p=>p.pid==product.pid);
-   if(result==undefined){
-   setProducts((previousProduct)=> {
-    return [...previousProduct,product];
-})
+   if(b1=="Add Product"){
+    
+    let result = products.find(p=>p.pid==product.pid);
+    if(result==undefined){
+    setProducts((previousProduct)=> {
+     return [...previousProduct,product];
+    })
+    }else {
+     alert("Pid must be unique");
+    }
+
    }else {
-    alert("Pid must be unique");
+        alert("We will do update operation")
    }
+   
+
+
 }
 let deleteProduct=function(event,pid){
     //console.log(pid);
@@ -46,6 +56,11 @@ let deleteProduct=function(event,pid){
     tempProducts.splice(index,1);   // move that index position the remove 1 product 
     setProducts(tempProducts);      // then tempProducts add in setProducts function 
 
+}
+let updateProduct= function(event,product){
+    console.log(product);
+    setProduct(product);    // to display product details in text field we bind with value attribute 
+    setButton("Update Product");
 }
     let productRecord = products.map(p=>
     <tr>
@@ -58,8 +73,13 @@ let deleteProduct=function(event,pid){
             onClick={(event)=> {
                 deleteProduct(event,p.pid);}}
             />
-        
-        </td>  
+        </td> 
+        <td>
+        <input type="button" value="Update Product" 
+            onClick={(event)=> {
+                updateProduct(event,p);}}
+            />
+        </td> 
     </tr>)
     return(
         <div>
@@ -80,30 +100,30 @@ let deleteProduct=function(event,pid){
         <h2>Add Product 2nd </h2>
         <form onSubmit={addProduct}>
             <label>PId</label>
-            <input type="number" name="product.pid" onChange={(event)=>
+            <input type="number" name="product.pid" value={product.pid} onChange={(event)=>
             setProduct((previousValue)=> {
                 return {...previousValue,pid:event.target.value}
             })
             }/><br/>
             <label>PName</label>
-            <input type="text" name="product.pname" onChange={(event)=>
+            <input type="text" name="product.pname"  value={product.pname} onChange={(event)=>
             setProduct((previousValue)=> {
                 return {...previousValue,pname:event.target.value}
             })
             }/><br/>
             <label>Price</label>
-            <input type="decimal" name="product.price" onChange={(event)=>
+            <input type="decimal" name="product.price"  value={product.price} onChange={(event)=>
             setProduct((previousValue)=> {
                 return {...previousValue,price:event.target.value}
             })
             }/><br/>
             <label>URL</label>
-            <input type="url" name="product.url" onChange={(event)=>
+            <input type="url" name="product.url"  value={product.url} onChange={(event)=>
             setProduct((previousValue)=> {
                 return {...previousValue,url:event.target.value}
             })
             }/><br/>
-            <input type="submit" value="Add Product"/>
+            <input type="submit" value={b1}/>
             <input type="reset" value="reset"/>
         </form>    
 
@@ -114,7 +134,8 @@ let deleteProduct=function(event,pid){
                     <th>PName</th>
                     <th>Price</th>
                     <th>URL</th>
-                    <th>Delete Operation</th>
+                    <th>Delete Product</th>
+                    <th>Update Product</th>
                 </tr>
             </thead>
             <tbody>
