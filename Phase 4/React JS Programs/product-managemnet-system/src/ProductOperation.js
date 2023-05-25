@@ -43,8 +43,8 @@ let addProduct = function(event){           // adding data through 2nd form
 
    }else {
         //alert("We will do update operation")
-        let tempProducts = [...products];   // store all product in tempProducts;
-        let index = tempProducts.findIndex(p=>p.pid==product.pid); // search product index number
+    let tempProducts = [...products];   // store all product in tempProducts;
+    let index = tempProducts.findIndex(p=>p.pid==product.pid); // search product index number
     // 1st paramteter index position and 2nd number of record to delete, and add new product in that location. 
     tempProducts.splice(index,1,product);   // move that index position the remove 1 product 
     setProducts(tempProducts);      // then tempProducts add in setProducts function 
@@ -67,6 +67,10 @@ let updateProduct= function(event,product){
     console.log(product);
     setProduct(product);    // to display product details in text field we bind with value attribute 
     setButton("Update Product");
+}
+let resetFun= (event)=> {
+    setProduct({pid:0,pname:"",price:0.0,url:""});
+    setButton("Add Product");
 }
     let productRecord = products.map(p=>
     <tr>
@@ -130,7 +134,7 @@ let updateProduct= function(event,product){
             })
             }/><br/>
             <input type="submit" value={b1}/>
-            <input type="reset" value="reset"/>
+            <input type="reset" value="reset" onClick={resetFun}/>
         </form>    
 
           <table border="1">
