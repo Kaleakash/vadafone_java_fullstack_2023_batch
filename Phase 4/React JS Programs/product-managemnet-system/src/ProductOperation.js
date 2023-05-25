@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './App.css';
 function ProductOperation() {
 
 let [b1,setButton]=useState("Add Product");     // to change button value;
@@ -93,7 +94,7 @@ let resetFun= (event)=> {
     </tr>)
     return(
         <div>
-            <h2>Add Product 1st </h2>
+            <h2 className="myClass">Add Product 1st </h2>
         <form onSubmit={storeProduct}>
             <label>PId</label>
             <input type="number" name="pid" onChange={(event)=>setPId(event.target.value)}/><br/>

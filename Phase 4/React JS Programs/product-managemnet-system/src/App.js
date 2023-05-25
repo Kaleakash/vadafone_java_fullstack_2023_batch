@@ -6,7 +6,7 @@ import Students from './Students';
 function App() {
   return (
     <div>
-     <h2>Product Management System</h2>
+     <h2 style={{color:"red",backgroundColor:"yellow"}}>Product Management System</h2>
      {/* <Students></Students> */}
      <ProductOperation></ProductOperation>
     </div>
