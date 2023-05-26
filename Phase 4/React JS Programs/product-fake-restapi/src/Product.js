@@ -12,7 +12,11 @@ let loadFakeData = function() {
     })
 }
 let product = products.map(p=><div>
-    <img src={p.images[0]} width="100px" height="100px"/>
+    
+    {p.images.map(img=>
+        <img src={img} width="100px" height="100px"/>    
+    )}
+
     {p.id}{p.title}{p.price}
     </div>)
     return(
