@@ -28,4 +28,34 @@ public class ProductService {
 			return "Product stored successfully";
 		}
 	}
+	
+	public String deleteProduct(int pid) {
+		Optional<Product> result = productRepository.findById(pid);
+		if(result.isPresent()) {
+			Product p = result.get();
+			productRepository.delete(p);
+			return "Product deleted successfully";
+		}else {
+			return "Product not present";
+		}
+	}
+	
+	public String updateProduct(Product p) {
+		Optional<Product> result = productRepository.findById(p.getPid());
+		if(result.isPresent()) {
+			Product product = result.get();
+			product.setPname(p.getPname());
+			product.setPrice(p.getPrice());
+			product.setUrl(p.getUrl());
+			productRepository.saveAndFlush(product);
+			return "Product detaild updated successfully";
+		}else {
+			return "Product not present";
+		}
+	}
 }
+
+
+
+
+

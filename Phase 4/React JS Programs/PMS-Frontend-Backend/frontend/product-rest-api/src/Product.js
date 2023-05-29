@@ -25,6 +25,17 @@ let addProduct = function(event){           //
     })
     setProduct({pid:0,pname:"",price:0.0,url:""});
 }
+
+let deleteProduct=function(event,pid){
+    console.log(pid);
+    axios.delete("http://localhost:8080/deleteProduct/"+pid).then(result=> {
+        console.log(result.data)
+        loadProducts();
+    }).catch(error=> {
+        console.log(error);
+    })
+}
+
 let resetFun= (event)=> {
     setProduct({pid:0,pname:"",price:0.0,url:""});
     setButton("Add Product");
@@ -36,6 +47,12 @@ let productRecord = products.map(p=><tr>
     <td>{p.price}</td>
     <td>
         <img src={p.url} width="100px" height="100px"/>
+    </td>
+    <td>
+    <input type="button" value="Delete Product" 
+            onClick={(event)=> {
+                deleteProduct(event,p.pid);}}
+             className="btn btn-danger"/>
     </td>
 </tr>)
     return(
@@ -82,6 +99,7 @@ let productRecord = products.map(p=><tr>
                     <th>PName</th>
                     <th>Price</th>
                     <th>URL</th>
+                    <th>Delete Record</th>
                 </tr>
                 </thead>
                 <tbody>
