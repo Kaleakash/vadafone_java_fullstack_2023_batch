@@ -1,0 +1,6 @@
+{
+    "questions":[
+        {"qid":1,"question":"5+6","ans1":"8","ans2":"11","ans3":"10","ans4":"9"},
+        {"qid":2,"question":"What is react js","ans1":"programming language","ans2":"javascript library ","ans3":"javascript framework","ans4":"java framework"}
+    ]
+}
