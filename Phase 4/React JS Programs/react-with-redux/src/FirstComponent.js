@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 function FirstComponent() {
-    let [n,setN]=useState(200);     // local variable we can access only in first component 
+let [n,setN]=useState(200);     // local variable we can access only in first component 
     let value  = useSelector(gs=>gs.counter);
     let fname = useSelector(gs=>gs.name);
     return(

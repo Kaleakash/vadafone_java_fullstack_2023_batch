@@ -6,6 +6,7 @@ let initialState = {                // initialState hold one variable as counter
 
 function reducer(state = initialState,action){
         // base upon action we can do some changes on initialState with counter variable. 
+       console.log(action);
         return state;
 }
 
