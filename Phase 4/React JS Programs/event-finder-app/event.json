@@ -1,0 +1,8 @@
+{
+    "events":[
+        {"id":1,"name":"Birthday","description":"Birthday party description"},
+        {"id":2,"name":"College","description":"College party description"},
+        {"id":3,"name":"School","description":"School party description"},
+        {"id":4,"name":"Marriage","description":"Marriage party description"}
+    ]
+}
