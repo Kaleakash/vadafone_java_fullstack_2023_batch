@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-27T14:26:18 IST" name="Default suite" finished-at="2023-06-27T14:26:18 IST" duration-ms="61">
+  <suite started-at="2023-06-27T14:31:38 IST" name="Default suite" finished-at="2023-06-27T14:31:38 IST" duration-ms="42">
     <groups>
     </groups>
-    <test started-at="2023-06-27T14:26:18 IST" name="Default test" finished-at="2023-06-27T14:26:18 IST" duration-ms="61">
+    <test started-at="2023-06-27T14:31:38 IST" name="Default test" finished-at="2023-06-27T14:31:38 IST" duration-ms="42">
       <class name="com.service.OperationTest">
-        <test-method signature="addTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:26:18 IST" name="addTest" finished-at="2023-06-27T14:26:18 IST" duration-ms="15" status="PASS">
+        <test-method signature="addTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:31:38 IST" name="addTest" finished-at="2023-06-27T14:31:38 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addTest -->
-        <test-method signature="divTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:26:18 IST" name="divTest" finished-at="2023-06-27T14:26:18 IST" duration-ms="2" status="PASS">
+        <test-method signature="divTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:31:38 IST" name="divTest" finished-at="2023-06-27T14:31:38 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- divTest -->
-        <test-method signature="mulTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:26:18 IST" name="mulTest" finished-at="2023-06-27T14:26:18 IST" duration-ms="1" status="PASS">
+        <test-method signature="mulTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:31:38 IST" name="mulTest" finished-at="2023-06-27T14:31:38 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mulTest -->
-        <test-method signature="subTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:26:18 IST" name="subTest" finished-at="2023-06-27T14:26:18 IST" duration-ms="1" status="PASS">
+        <test-method signature="subTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:31:38 IST" name="subTest" finished-at="2023-06-27T14:31:38 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- subTest -->
