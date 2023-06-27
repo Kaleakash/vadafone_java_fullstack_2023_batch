@@ -1,16 +1,11 @@
 package com.service;
-
 import static org.junit.Assert.*;
-
 import java.util.List;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
-
 import com.bean.Employee;
-
 public class EmployeeServiceTest {
 	static EmployeeService es;
 	@BeforeClass
@@ -31,7 +26,6 @@ public class EmployeeServiceTest {
 		assertEquals(e.getName(), "Lex");
 		assertEquals(e.getSalary(), 16000,0.0);    // 3rd parameter delta till what decimal point we need to check
 	}
-
 	@Test
 	//@Ignore
 	public void testGetAllEmployees() {
@@ -42,7 +36,6 @@ public class EmployeeServiceTest {
 		assertEquals(emp.getName(), "Lex");
 		assertEquals(emp.getSalary(), 16000,0.0); 
 	}
-
 	@Test
 	//@Ignore
 	public void testUpdateSalary() {
