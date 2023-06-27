@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-27T14:31:38 IST" name="Default suite" finished-at="2023-06-27T14:31:38 IST" duration-ms="42">
+  <suite started-at="2023-06-27T15:06:26 IST" name="Suite" finished-at="2023-06-27T15:06:26 IST" duration-ms="52">
     <groups>
     </groups>
-    <test started-at="2023-06-27T14:31:38 IST" name="Default test" finished-at="2023-06-27T14:31:38 IST" duration-ms="42">
+    <test started-at="2023-06-27T15:06:26 IST" name="Test" finished-at="2023-06-27T15:06:26 IST" duration-ms="52">
+      <class name="com.service.EmployeeServiceTest">
+        <test-method signature="getAllEmployeeTest()[pri:0, instance:com.service.EmployeeServiceTest@50ad3bc1]" started-at="2023-06-27T15:06:26 IST" name="getAllEmployeeTest" finished-at="2023-06-27T15:06:26 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllEmployeeTest -->
+        <test-method signature="searchEmployeeTest()[pri:0, instance:com.service.EmployeeServiceTest@50ad3bc1]" started-at="2023-06-27T15:06:26 IST" name="searchEmployeeTest" finished-at="2023-06-27T15:06:26 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchEmployeeTest -->
+        <test-method signature="storeEmployeeTest()[pri:0, instance:com.service.EmployeeServiceTest@50ad3bc1]" started-at="2023-06-27T15:06:26 IST" name="storeEmployeeTest" finished-at="2023-06-27T15:06:26 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- storeEmployeeTest -->
+      </class> <!-- com.service.EmployeeServiceTest -->
       <class name="com.service.OperationTest">
-        <test-method signature="addTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:31:38 IST" name="addTest" finished-at="2023-06-27T14:31:38 IST" duration-ms="10" status="PASS">
+        <test-method signature="addTest()[pri:0, instance:com.service.OperationTest@3059cbc]" started-at="2023-06-27T15:06:26 IST" name="addTest" finished-at="2023-06-27T15:06:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addTest -->
-        <test-method signature="divTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:31:38 IST" name="divTest" finished-at="2023-06-27T14:31:38 IST" duration-ms="1" status="PASS">
+        <test-method signature="divTest()[pri:0, instance:com.service.OperationTest@3059cbc]" started-at="2023-06-27T15:06:26 IST" name="divTest" finished-at="2023-06-27T15:06:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- divTest -->
-        <test-method signature="mulTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:31:38 IST" name="mulTest" finished-at="2023-06-27T14:31:38 IST" duration-ms="1" status="PASS">
+        <test-method signature="mulTest()[pri:0, instance:com.service.OperationTest@3059cbc]" started-at="2023-06-27T15:06:26 IST" name="mulTest" finished-at="2023-06-27T15:06:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mulTest -->
-        <test-method signature="subTest()[pri:0, instance:com.service.OperationTest@793be5ca]" started-at="2023-06-27T14:31:38 IST" name="subTest" finished-at="2023-06-27T14:31:38 IST" duration-ms="2" status="PASS">
+        <test-method signature="subTest()[pri:0, instance:com.service.OperationTest@3059cbc]" started-at="2023-06-27T15:06:26 IST" name="subTest" finished-at="2023-06-27T15:06:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- subTest -->
       </class> <!-- com.service.OperationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

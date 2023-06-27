@@ -39,10 +39,11 @@ public class EmployeeService {
 				break;
 			}
 		}
-		if(flag==0) {
+		if(flag!=0) {
 			return "Employee record didn't store";
 		}else {
 			listOfEmp.add(emp);
+			flag = 0;
 			return "Record stored";
 		}
 	}
