@@ -2,22 +2,22 @@
 <testng-results ignored="4" total="6" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-27T16:32:06 IST" name="Suite" finished-at="2023-06-27T16:32:06 IST" duration-ms="39">
+  <suite started-at="2023-06-27T16:50:57 IST" name="Suite" finished-at="2023-06-27T16:50:57 IST" duration-ms="35">
     <groups>
       <group name="speed">
         <method signature="BikeTest.speedTest()[pri:0, instance:com.service.BikeTest@57af006c]" name="speedTest" class="com.service.BikeTest"/>
         <method signature="CarTest.speedTest()[pri:0, instance:com.service.CarTest@ea6147e]" name="speedTest" class="com.service.CarTest"/>
       </group> <!-- speed -->
     </groups>
-    <test started-at="2023-06-27T16:32:06 IST" name="Test" finished-at="2023-06-27T16:32:06 IST" duration-ms="39">
+    <test started-at="2023-06-27T16:50:57 IST" name="Test" finished-at="2023-06-27T16:50:57 IST" duration-ms="35">
       <class name="com.service.CarTest">
-        <test-method signature="speedTest()[pri:0, instance:com.service.CarTest@ea6147e]" started-at="2023-06-27T16:32:06 IST" name="speedTest" finished-at="2023-06-27T16:32:06 IST" duration-ms="1" status="PASS">
+        <test-method signature="speedTest()[pri:0, instance:com.service.CarTest@ea6147e]" started-at="2023-06-27T16:50:57 IST" name="speedTest" finished-at="2023-06-27T16:50:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- speedTest -->
       </class> <!-- com.service.CarTest -->
       <class name="com.service.BikeTest">
-        <test-method signature="speedTest()[pri:0, instance:com.service.BikeTest@57af006c]" started-at="2023-06-27T16:32:06 IST" name="speedTest" finished-at="2023-06-27T16:32:06 IST" duration-ms="5" status="PASS">
+        <test-method signature="speedTest()[pri:0, instance:com.service.BikeTest@57af006c]" started-at="2023-06-27T16:50:57 IST" name="speedTest" finished-at="2023-06-27T16:50:57 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- speedTest -->
