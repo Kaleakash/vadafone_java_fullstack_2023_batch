@@ -4,6 +4,7 @@
     <classes>
       <class name="com.service.EmployeeServiceTest"/>
       <class name="com.service.OperationTest"></class>
+      <class name="com.service.TestNGHook"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
