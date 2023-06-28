@@ -410,6 +410,5 @@ Selenium dependency
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.2.1</version>
+    <version>4.8.0</version>
 </dependency>
-
