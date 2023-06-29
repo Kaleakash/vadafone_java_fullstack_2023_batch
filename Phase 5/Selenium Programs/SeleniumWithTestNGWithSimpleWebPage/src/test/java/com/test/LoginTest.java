@@ -25,7 +25,6 @@ public class LoginTest {
 		WebElement h2TagREf = driver.findElement(By.tagName("h2"));
 		assertEquals(h2TagREf.getText(), "Welcomem to Home page");
 	  }
-	  
 	  @BeforeTest
 	  public void beforeTest() {
 		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\akash\\Desktop\\vadafone_java_fullstack_2023_batch\\New folder\\chromedriver_win32\\chromedriver.exe");
