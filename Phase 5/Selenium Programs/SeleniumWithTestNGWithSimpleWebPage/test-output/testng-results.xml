@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-29T14:40:11 IST" name="Default suite" finished-at="2023-06-29T14:40:13 IST" duration-ms="1816">
+  <suite started-at="2023-06-29T15:20:14 IST" name="Default suite" finished-at="2023-06-29T15:20:22 IST" duration-ms="8218">
     <groups>
     </groups>
-    <test started-at="2023-06-29T14:40:11 IST" name="Default test" finished-at="2023-06-29T14:40:13 IST" duration-ms="1816">
-      <class name="com.test.LoginTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.test.LoginTest@942a29c]" started-at="2023-06-29T14:40:11 IST" name="beforeTest" finished-at="2023-06-29T14:40:12 IST" duration-ms="1581" status="PASS">
+    <test started-at="2023-06-29T15:20:14 IST" name="Default test" finished-at="2023-06-29T15:20:22 IST" duration-ms="8218">
+      <class name="com.test.GooglePageTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.test.GooglePageTest@4f80542f]" started-at="2023-06-29T15:20:14 IST" name="beforeTest" finished-at="2023-06-29T15:20:16 IST" duration-ms="1591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="emptyEmailidField()[pri:0, instance:com.test.LoginTest@942a29c]" started-at="2023-06-29T14:40:12 IST" name="emptyEmailidField" finished-at="2023-06-29T14:40:13 IST" duration-ms="111" status="PASS">
+        <test-method signature="googlePageTest()[pri:0, instance:com.test.GooglePageTest@4f80542f]" started-at="2023-06-29T15:20:16 IST" name="googlePageTest" finished-at="2023-06-29T15:20:22 IST" duration-ms="6596" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emptyEmailidField -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.test.LoginTest@942a29c]" started-at="2023-06-29T14:40:13 IST" name="afterTest" finished-at="2023-06-29T14:40:13 IST" duration-ms="94" status="PASS">
+        </test-method> <!-- googlePageTest -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.test.GooglePageTest@4f80542f]" started-at="2023-06-29T15:20:22 IST" name="afterTest" finished-at="2023-06-29T15:20:22 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.test.LoginTest -->
+      </class> <!-- com.test.GooglePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -24,7 +24,6 @@ public class LoginTest {
 		   alertRef.dismiss();
 		   assertEquals(result, "EmailId is requried");
 	   }
-	
 	   @Test(enabled = false)
 	   public void emptyPasswordField() {
 		   WebElement emailidREf = driver.findElement(By.id("n1"));
@@ -36,8 +35,7 @@ public class LoginTest {
 		   alertRef.dismiss();
 		   assertEquals(result, "Password is required");
 	   }
-	   
-	   @Test(enabled = false)
+	  @Test(enabled = false)
 	  public void loginPageSuccess() {
 		WebElement emailidREf = driver.findElement(By.id("n1"));
 		WebElement passwordREf = driver.findElement(By.id("n2"));
