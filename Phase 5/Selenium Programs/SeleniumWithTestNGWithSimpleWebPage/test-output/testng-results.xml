@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-28T17:18:04 IST" name="Default suite" finished-at="2023-06-28T17:18:08 IST" duration-ms="3561">
+  <suite started-at="2023-06-29T14:40:11 IST" name="Default suite" finished-at="2023-06-29T14:40:13 IST" duration-ms="1816">
     <groups>
     </groups>
-    <test started-at="2023-06-28T17:18:04 IST" name="Default test" finished-at="2023-06-28T17:18:08 IST" duration-ms="3561">
+    <test started-at="2023-06-29T14:40:11 IST" name="Default test" finished-at="2023-06-29T14:40:13 IST" duration-ms="1816">
       <class name="com.test.LoginTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.test.LoginTest@4f80542f]" started-at="2023-06-28T17:18:04 IST" name="beforeTest" finished-at="2023-06-28T17:18:07 IST" duration-ms="2601" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.test.LoginTest@942a29c]" started-at="2023-06-29T14:40:11 IST" name="beforeTest" finished-at="2023-06-29T14:40:12 IST" duration-ms="1581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="indexPageTest()[pri:0, instance:com.test.LoginTest@4f80542f]" started-at="2023-06-28T17:18:07 IST" name="indexPageTest" finished-at="2023-06-28T17:18:08 IST" duration-ms="686" status="PASS">
+        <test-method signature="emptyEmailidField()[pri:0, instance:com.test.LoginTest@942a29c]" started-at="2023-06-29T14:40:12 IST" name="emptyEmailidField" finished-at="2023-06-29T14:40:13 IST" duration-ms="111" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- indexPageTest -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.test.LoginTest@4f80542f]" started-at="2023-06-28T17:18:08 IST" name="afterTest" finished-at="2023-06-28T17:18:08 IST" duration-ms="197" status="PASS">
+        </test-method> <!-- emptyEmailidField -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.test.LoginTest@942a29c]" started-at="2023-06-29T14:40:13 IST" name="afterTest" finished-at="2023-06-29T14:40:13 IST" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

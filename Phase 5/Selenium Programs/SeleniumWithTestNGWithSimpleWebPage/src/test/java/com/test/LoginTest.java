@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeTest;
 
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,16 +15,55 @@ import org.testng.annotations.AfterTest;
 
 public class LoginTest {
 	ChromeDriver driver;
-	 @Test
-	  public void indexPageTest() {
+	   @Test(enabled = true)
+	   public void emptyEmailidField() {
+		   WebElement submitButtonRef = driver.findElement(By.id("b1"));
+		   submitButtonRef.click();
+		   Alert alertRef= driver.switchTo().alert();
+		   String result = alertRef.getText();
+		   alertRef.dismiss();
+		   assertEquals(result, "EmailId is requried");
+	   }
+	
+	   @Test(enabled = false)
+	   public void emptyPasswordField() {
+		   WebElement emailidREf = driver.findElement(By.id("n1"));
+		   emailidREf.sendKeys("akash@gmail.com");
+		   WebElement submitButtonRef = driver.findElement(By.id("b1"));
+		   submitButtonRef.click();
+		   Alert alertRef= driver.switchTo().alert();
+		   String result = alertRef.getText();
+		   alertRef.dismiss();
+		   assertEquals(result, "Password is required");
+	   }
+	   
+	   @Test(enabled = false)
+	  public void loginPageSuccess() {
 		WebElement emailidREf = driver.findElement(By.id("n1"));
 		WebElement passwordREf = driver.findElement(By.id("n2"));
 		emailidREf.sendKeys("akash@gmail.com");
-		passwordREf.sendKeys("1234");
+		passwordREf.sendKeys("123");
 		WebElement submitButtonRef = driver.findElement(By.id("b1"));
 		submitButtonRef.click();
+		Alert alertRef= driver.switchTo().alert();
+		   String result = alertRef.getText();
+		   alertRef.dismiss();
+		   assertEquals(result, "successfully login");
 		WebElement h2TagREf = driver.findElement(By.tagName("h2"));
 		assertEquals(h2TagREf.getText(), "Welcomem to Home page");
+	  }
+	   @Test(enabled = false)
+	  public void loginPageFailure() {
+		WebElement emailidREf = driver.findElement(By.id("n1"));
+		WebElement passwordREf = driver.findElement(By.id("n2"));
+		emailidREf.sendKeys("akash@gmail.com");
+		passwordREf.sendKeys("12");
+		WebElement submitButtonRef = driver.findElement(By.id("b1"));
+		submitButtonRef.click();
+		Alert alertRef= driver.switchTo().alert();
+		   String result = alertRef.getText();
+		   alertRef.dismiss();
+		   assertEquals(result, "failure");
 	  }
 	  @BeforeTest
 	  public void beforeTest() {

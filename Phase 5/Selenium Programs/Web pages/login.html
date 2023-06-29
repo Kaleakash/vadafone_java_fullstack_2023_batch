@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/JavaScript">
+        function validate() {
+        let emailid = document.getElementById("n1").value;
+        let password = document.getElementById("n2").value;
+        if(emailid.length==0){
+                alert("EmailId is requried")
+                return false;
+        }else if(password.length==0){
+            alert("Password is required")
+            return false;
+        }else if(emailid=="akash@gmail.com" && password=="123"){
+            alert("successfully login")
+            return true;
+        }else {
+            alert("failure")
+            return false;
+        }
+        }
+    </script>
 </head>
 <body>
-    <form action="welcome.html">
+    <form action="welcome.html" onsubmit="return validate()">
         <label>EmailId</label>
         <input type="email" name="email" id="n1"/><br/>
         <label>Password</label>
