@@ -1,0 +1,129 @@
+update ec2 instance 
+
+sudo yum -y update
+
+--------------->Git install 
+
+sudo yum install git -y
+
+install java 
+------------------------------------------
+Java 8 
+
+sudo yum install java-1.8.0-openjdk
+java -version 
+sudo yum remove java-1.8.0-openjdk -y
+
+java 11 
+
+sudo amazon-linux-extras install java-openjdk11
+
+sudo alternatives --config java		: This command is switch from one version to another version 
+
+
+---------------------------------------------
+
+------------------->Jenkin 
+
+	Now, to download the latest Jenkins package
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+
+	**iv. **To enable the installation of the package, import the key file from Jenkins-CI:
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+	Install Jenkins on the EC2 instance
+
+sudo yum install jenkins
+
+	To start the Jenkins service
+
+sudo service jenkins start
+
+	To check the status 
+
+sudo systemctl status jenkins
+
+	This one is get the password 
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+-----------------------> Node JS 
+
+node --version 
+
+
+install node 
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+or 
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+. ~/.nvm/nvm.sh
+
+nvm install node		(node version manager)
+or 
+nvm install --lts
+
+
+-------> Mongo DB install 
+
+sudo yum install -y mongodb-org
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/	refer this documentation 
+
+
+sudo yum install -y mongodb-org				: may be file not present 
+
+sudo vi /etc/yum.repos.d/mongodb-org-5.0.repo		: this will create the file 
+
+[mongodb-org-5.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/amazon/2/mongodb-org/5.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+
+cont key
+:wq!
+
+
+sudo yum install -y mongodb-org
+
+to start the server 
+
+sudo systemctl start mongod
+
+if wait to start 
+
+sudo systemctl daemon-reload
+
+to check the status 
+
+sudo systemctl status mongod
+
+Then to run the application 
+
+mongo 
+
+--------------Docker 
+
+install docker 
+
+sudo yum install docker
+
+sudo service docker start
+
+sudo docker info
+
+
+
+
+
+
+
+ps | grep java-fullstack | awk '{print $1}' | xargs kill -9 || true
+env SERVER.PORT=8081 nohup java -jar ./target/java-fullstack-1.0-SNAPSHOT.jar &
+
