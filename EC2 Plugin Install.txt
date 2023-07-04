@@ -20,6 +20,8 @@ sudo amazon-linux-extras install java-openjdk11
 
 sudo alternatives --config java		: This command is switch from one version to another version 
 
+sudo yum install java 			(current version 17) 
+
 
 ---------------------------------------------
 
@@ -54,6 +56,9 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 node --version 
 
+sudo yum install nodejs npm
+
+or 
 
 install node 
 
