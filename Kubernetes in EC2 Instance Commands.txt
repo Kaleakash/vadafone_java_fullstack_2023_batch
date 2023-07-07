@@ -1,0 +1,73 @@
+--> Create EC2 instance in AWS with 2 CPU 
+
+--> Install Kubectl 
+
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+chmod +x ./kubectl
+
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+-->Install Docker 
+
+sudo yum install docker
+
+sudo service docker start
+
+sudo docker info
+
+--> Install Minikube
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+
+minikube version
+
+
+--> Become a root user.
+
+sudo -i
+
+minikube start --vm-driver=none
+
+If you get error then 
+
+sudo yum install -y conntrack
+
+minikube start driver=none
+
+or 
+
+minikube start driver=none –force 
+
+
+--> Minikube status 
+
+minikube status
+
+--> let run the container  (simple docker image of simple web page created and publish in docker hub account) 
+
+kubectl create deployment my-simpe-page --image=akashkale/my-simple-kubernetes
+
+--> Get Pods details 
+
+kubectl get pods 
+
+--> Get Service details 
+
+kubectl get service 
+
+-->Get Deployment details 
+
+kubectl get deployment 
+
+-->Run the application using kubectl using pods name 
+
+kubectl port-forward pod_name --address 0.0.0.0 9999:80
+
+kubectl port-forward my-simpe-page-5b59fc7cd8-mkgls  --address 0.0.0.0 80:80		(make sure 80 port number open in inbound rule in EC2 instance)
+
+
+Then test you application 
+
+http://ipAddress:80
+
