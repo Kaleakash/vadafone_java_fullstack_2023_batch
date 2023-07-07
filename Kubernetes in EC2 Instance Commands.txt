@@ -1,5 +1,7 @@
 --> Create EC2 instance in AWS with 2 CPU 
 
+Then connect to EC2 instance using SSH Client. 
+
 --> Install Kubectl 
 
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
@@ -8,6 +10,8 @@ chmod +x ./kubectl
 
 sudo mv ./kubectl /usr/local/bin/kubectl
 
+kubectl version
+
 -->Install Docker 
 
 sudo yum install docker
@@ -15,6 +19,8 @@ sudo yum install docker
 sudo service docker start
 
 sudo docker info
+
+sudo docker images 
 
 --> Install Minikube
 
@@ -62,7 +68,7 @@ kubectl get deployment
 
 -->Run the application using kubectl using pods name 
 
-kubectl port-forward pod_name --address 0.0.0.0 9999:80
+kubectl port-forward pods_name --address 0.0.0.0 80:80
 
 kubectl port-forward my-simpe-page-5b59fc7cd8-mkgls  --address 0.0.0.0 80:80		(make sure 80 port number open in inbound rule in EC2 instance)
 
