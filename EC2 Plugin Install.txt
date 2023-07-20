@@ -27,7 +27,7 @@ sudo yum install java 			(current version 17)
 
 ------------------->Jenkin 
 
-	Now, to download the latest Jenkins package
+Now, to download the latest Jenkins package
 
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
 
