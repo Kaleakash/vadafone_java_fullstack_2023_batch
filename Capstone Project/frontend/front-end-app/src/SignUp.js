@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 function SignUp() {
 let [emailid,setEmailiId]=useState("");
@@ -27,7 +28,8 @@ let signIn=async (event)=> {
         <input type="radio" name="typeofuser" value="admin" onChange={e=>setTypeOfUser(e.target.value)}/>Admin
         <input type="radio" name="typeofuser" value="customer" onChange={e=>setTypeOfUser(e.target.value)}/>Customer<br/>
         <input type="submit" value="submit"/>
-        <input type="reset" value="reset"/>
+        <input type="reset" value="reset"/><br/>
+        <Link to="/">Login</Link>
         </form>
         </div>
     )
