@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.entity.Account;
 import com.entity.Login;
 import com.repository.LoginRepository;
 
@@ -13,6 +14,9 @@ public class LoginService {
 
 	@Autowired
 	LoginRepository loginRepository;
+	
+	@Autowired
+	AccountService accountService;
 	
 	public String signIn(Login login) {		
 		Optional<Login> result = loginRepository.findById(login.getEmailid());
@@ -43,7 +47,12 @@ public class LoginService {
 			if(result.isPresent()) {
 				return "Account alredy exists";
 			}else {
+				Account acc = new Account();
+				acc.setAmount(1000);					// accno auto generate, amount 1000, emaliid as FK
+				acc.setEmailid(login.getEmailid());
 				loginRepository.save(login);
+				accountService.createAccount(acc);
+				
 				return "Account created successfully";
 			}
 		}
